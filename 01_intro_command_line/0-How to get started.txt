@@ -1,0 +1,61 @@
+To get started:
+
+To utilize the command line and bash shell
+==========================================
+
+Mac OS X
+--------
+
+Open up the Terminal, type in “git” and press enter.
+This should cause a pop-up window to appear. It will have several options; click on “Install” (not “Get Xcode”, see “Installing Xcode” for that).
+Click “Agree”.
+When the install is finished, click “Done”.
+To make sure this worked, type in “git” in the Terminal and press enter. Some information will come up, including a list of common commands.
+If this doesn’t work you can try the following:
+
+For OS X 10.9 and higher, install Git for Mac by downloading and running the most recent “mavericks” installer from this list. After installing Git, there will not be anything in your /Applications folder, as Git is a command line program. For older versions of OS X (10.5-10.8) use the most recent available installer labelled “snow-leopard” available here
+
+Windows
+-------
+Download the Git for Windows installer.
+	Run the installer and follow the steps bellow:
+	Click on “Next”.
+	Click on “Next”.
+	Click on “Next”.
+	Click on “Next”.
+	Click on “Next”.
+	Select “Use Git from the Windows Command Prompt” and click on “Next”. If you forgot to do this programs that you need for the workshop will not work properly. If this happens rerun the installer and select the appropriate option.
+	Click on “Next”. Keep “Checkout Windows-style, commit Unix-style line endings” selected.
+	Select “Use Windows’ default console window” and click on “Next”.
+	Click on “Next”.
+	Click on “Finish”.
+
+
+Linux
+-----
+
+Git is probably already installed. If it is not already available on your machine you can try to install it via your distro’s package manager. For Debian/Ubuntu run sudo apt-get install git and for Fedora run sudo yum install git.
+
+For more help please see here:
+http://www.datacarpentry.org/semester-biology/computer-setup/
+
+For even more help please contact your local pc administrator to IT personnel.
+
+
+To install Python and the Jupiter Project (including the Jupyter Notebook):
+===========================================================================
+
+1. Download and install the Continuum Analytics Anaconda Python 3 distribution from:
+
+	https://www.continuum.io/downloads
+
+1.1 Following the instructions for the installer. This will also install an up-to-date version of the python programing language, the Jupyter notebook software as well as a number of python programming packages that we will use in this series.
+
+2. Next launch the Jupyter notebook by:
+
+2.1 Double clicking on the Navigator icon on the desktop, then when the Navigator opens click on the notebook application button OR 
+2.2 By typing "jupyter notebook" in your Terminal or command prompt
+
+3. You should see the Jupyter Notebook dashboard with a list of files and folders. 
+
+4. To open the lessons we will be using open the folder (in the dashboard) where you saved the lessons (where this file is located)
