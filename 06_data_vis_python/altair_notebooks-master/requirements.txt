@@ -1,0 +1,5 @@
+traitlets>=4.3.1
+ipython
+pandas
+vega==0.4.4
+altair==1.2.1
