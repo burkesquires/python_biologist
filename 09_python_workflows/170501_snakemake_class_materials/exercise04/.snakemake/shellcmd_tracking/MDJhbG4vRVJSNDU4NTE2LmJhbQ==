@@ -1,0 +1,7 @@
+
+        exec &> 00log/hisat2_ERR458516
+        module load hisat/2.0.5 samtools/1.4
+        mkdir -p 02aln
+        hisat2 -x 00ref/hisat_index/R64-1-1 -U 00fastq/ERR458516.fastq.gz --threads 4           | samtools sort -T tmp/ERR458516 -O BAM           > 02aln/ERR458516.bam
+        samtools index 02aln/ERR458516.bam
+        

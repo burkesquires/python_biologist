@@ -1,0 +1,3 @@
+
+        ../rnaseq hisat2-build -p 1 R64-1-1.fa hisat_index/R64-1-1                 && touch hisat_index/R64-1-1
+        

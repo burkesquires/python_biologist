@@ -1,0 +1,5 @@
+
+        wget ftp://ftp.ensembl.org/pub/release-88/fasta/saccharomyces_cerevisiae/cdna/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa.gz
+        gunzip Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa.gz
+        mv Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa R64-1-1.cdna.fa
+        

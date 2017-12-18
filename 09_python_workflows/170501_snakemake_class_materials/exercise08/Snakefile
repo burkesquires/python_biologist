@@ -1,0 +1,156 @@
+# vim: set ft=python:
+
+localrules: all, merge_counts, clean
+
+configfile: "config.yml"
+SAMPLES = config["samples"].keys()
+
+shell.executable("./rnaseq")
+shell.prefix("""
+set -e -o pipefail;
+if [[ "none$SLURM_JOBID" != none && -d /lscratch/$SLURM_JOBID ]]; then
+    export TMPDIR=/lscratch/$SLURM_JOBID;
+else
+    mkdir -p ./tmp;
+    export TMPDIR=./tmp;
+fi;
+""")
+
+rule all:
+    input: expand("01qc/{sample}_fastqc.html", sample=SAMPLES),
+           expand("02aln/{sample}.bam", sample=SAMPLES),
+           expand("01qc/{sample}.infer_experiment", sample=SAMPLES),
+           "04count/merged",
+           expand("05salmon/{sample}", sample=SAMPLES)
+
+rule clean:
+    shell:
+        """
+        rm -rf 01qc 02aln 03track 04count 05salmon
+        """
+
+rule fastqc:
+    input: "00fastq/{sample}.fastq.gz"
+    output: pkg = "01qc/{sample}_fastqc.zip",
+            summary = "01qc/{sample}_fastqc_summary.txt",
+            data = "01qc/{sample}_fastqc_data.txt",
+            html = "01qc/{sample}_fastqc.html"
+    threads: 1
+    log: "00log/fastqc_{sample}"
+    shell:
+        """
+        exec &> {log}
+        odir=01qc/{wildcards.sample}_fastqc
+        fastqc -o 01qc --extract {input}
+        mv $odir/summary.txt {output.summary}
+        mv $odir/fastqc_data.txt {output.data}
+        rm -rf $odir
+        """
+rule hisat:
+    """produces sorted bam file directly"""
+    input: fq = "00fastq/{sample}.fastq.gz",
+           idx = "00ref/hisat_index/{}".format(config["reference"]["genome_build"])
+    output: bam = "02aln/{sample}.bam",
+            bai = "02aln/{sample}.bam.bai"
+    threads: 4
+    log: "00log/hisat2_{sample}"
+    shell:
+        """
+        exec &> {log}
+        hisat2 -x {input.idx} -U {input.fq} --threads {threads} \
+          | samtools sort -T $TMPDIR/{wildcards.sample} -O BAM \
+          > {output.bam}
+        samtools index {output.bam}
+       """
+
+
+rule rseqc:
+    """
+    post-process the sorted bam file.
+    Copy bam file to TMPDIR and operate there. This is done b/c TMPDIR is
+    hopefully on a local disk and thus this avoids extra roundtrips to
+    the networked filesystems.
+    """
+    input: bam = "02aln/{sample}.bam",
+           bai = "02aln/{sample}.bam.bai",
+           bed = "00ref/R64-1-1.genes.bed12",
+           gs  = "00ref/chromosomes"
+    output: ie  = "01qc/{sample}.infer_experiment",
+            gb  = "01qc/{sample}.geneBodyCoverage.txt",
+            gb2 = "01qc/{sample}.geneBodyCoverage.r",
+            gb3 = "01qc/{sample}.geneBodyCoverage.curves.pdf",
+            wig = "03track/{sample}.wig"
+    log: "00log/rseqc_{sample}"
+    threads: 1
+    shell:
+        """
+        exec &> {log}
+        cp {input.bam} {input.bai} $TMPDIR
+        bam=$TMPDIR/$(basename {input.bam})
+        infer_experiment.py -i $bam -r {input.bed} > {output.ie}
+        geneBody_coverage.py -i $bam -r {input.bed} \
+                -o 01qc/{wildcards.sample}
+        bam2wig.py -i $bam -s {input.gs} \
+                -o $(echo {output.wig} | sed 's/.wig//') -t 1000000 -u
+        rm ${{bam}}*
+        """
+
+
+rule count:
+    input: bam = "02aln/{sample}.bam",
+           annot = "00ref/R64-1-1.genes.gtf"
+    output: "04count/{sample}"
+    log: "00log/count_{sample}"
+    threads: 2
+    shell:
+        """
+        exec &> {log}
+        featureCounts -a {input.annot} -o {output} \
+                -T {threads} --minOverlap 10 {input.bam}
+        """
+
+rule merge_counts:
+    input: expand("04count/{sample}", sample=SAMPLES)
+    output: "04count/merged"
+    log: "00log/merge_counts"
+    threads: 1
+    shell:
+        """
+        exec &> {log}
+        set -x
+        rm -f {output}
+        for f in {input}; do
+            if [[ -e {output} ]]; then
+                paste {output} <(tail -n +2 $f | awk '{{print $7"\t"$1}}') \
+                    | awk -F'\t' 'BEGIN{{OFS="\t"}} $NF != $1 {{exit 1}} {{NF-=1; print}}' \
+                    > {output}.tmp && mv {output}.tmp {output}
+            else
+                tail -n +2 $f > {output}
+            fi
+        done
+        """
+
+rule salmon_index:
+    input: config["reference"]["cdna_file"]
+    output: "00ref/salmon_index"
+    threads: 4
+    log: "00log/salmon_index"
+    shell:
+        """
+        exec &> {log}
+        rm -rf {output}
+        salmon index -t {input} -k 21 -i {output} -p {threads}
+        """
+
+rule salmon_quant:
+    input: fq = "00fastq/{sample}.fastq.gz",
+           idx = "00ref/salmon_index"
+    output: "05salmon/{sample}"
+    log: "00log/salmonquant_{sample}"
+    threads: 4
+    shell:
+        """
+        exec &> {log}
+        salmon quant -i {input.idx} -l A -r {input.fq} \
+                -p {threads} --seqBias --gcBias -o {output}
+        """

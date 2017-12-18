@@ -1,0 +1,9 @@
+__default__:
+    partition: quick
+    time: 10
+    mem: 4g
+    out: 00log/{rule}.{wildcards.sample}
+    extra: ""
+hisat:
+    mem: 10g
+    extra: --gres=lscratch:5

@@ -1,0 +1,26 @@
+# vim: set ft=python:
+
+rule all:
+    input: "02aln/ERR458495.bam",
+           "02aln/ERR458502.bam"
+
+rule clean:
+    shell:
+        """
+        rm -rf 02aln
+        """
+
+rule hisat2:
+    input: fq = "00fastq/{sample}.fastq.gz",
+           idx = "00ref/hisat_index/R64-1-1"
+    output: bam = "02aln/{sample}.bam",
+            bai = "02aln/{sample}.bam.bai"
+    shell:
+        """
+        module load hisat/2.0.5 samtools/1.4
+        mkdir -p 02aln
+        hisat2 -x {input.idx} -U {input.fq} --threads 4 \
+          | samtools sort -T tmp/{wildcards.sample} -O BAM \
+          > {output.bam}
+        samtools index {output.bam}
+        """

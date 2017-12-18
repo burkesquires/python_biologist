@@ -1,0 +1,3 @@
+
+        ../rnaseq-tools hisat2-build -p 1 R64-1-1.fa R64-1-1
+        

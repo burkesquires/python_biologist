@@ -1,0 +1,5 @@
+
+        head -n1 class/ERP004763_sample_table.tsv > class/samples.tsv
+        pattern="$(echo ERR458495 ERR458502 ERR458509 ERR458516 ERR458880 ERR458887 | tr -s ' ' '|')"
+        egrep "$pattern" class/ERP004763_sample_table.tsv | sort -k3,4 >> class/samples.tsv
+        

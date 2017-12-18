@@ -1,0 +1,48 @@
+# vim: set ft=python:
+
+localrules: fetch_desc, fetch_fastq, sample_table, all
+
+SAMPLES = ["ERR458495",
+        "ERR458502",
+        "ERR458509",
+        "ERR458516",
+        "ERR458880",
+        "ERR458887"]
+
+rule all:
+    input: "samples.yml",
+           expand("{sample}.fastq.gz", sample=SAMPLES)
+
+rule fetch_desc:
+    """fetch the sample description table"""
+    output: "ERP004763_sample_table.tsv"
+    shell:
+        """
+        wget -O {output} \
+          https://ndownloader.figshare.com/files/2194841
+        """
+
+rule sample_table:
+    input: "ERP004763_sample_table.tsv"
+    output: "samples.yml"
+    shell:
+        """
+        echo "samples:" > {output}
+        pattern="$(echo {SAMPLES} | tr -s ' ' '|')"
+        egrep "$pattern" {input} \
+                | sort -k3,4 \
+                | awk '{{printf("  %s:\\n    gt: %s\\n    rep: %s\\n", $1, $3, $4)}}' \
+                >> {output}
+        """
+
+rule fetch_fastq:
+    """3 biological replicates each of wt and snf2-/-"""
+    output: expand("{sample}.fastq.gz", sample=SAMPLES)
+    shell:
+        """
+        url="ftp://ftp.sra.ebi.ac.uk/vol1/fastq"
+        for o in {output}; do
+            sample=$(basename $o .fastq.gz)
+            wget -O $o "$url/ERR458/$sample/$sample.fastq.gz"
+        done
+        """

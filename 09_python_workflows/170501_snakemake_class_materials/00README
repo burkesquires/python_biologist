@@ -1,0 +1,21 @@
+
+
+fetch the input data
+================================================================================
+
+The tarball does not include the input fastq files. To download the data and
+re-generate the metadata files (if necessary) do the following:
+
+```
+cd 00fastq
+module load snakemake
+snakemake
+```
+
+
+Singularity image
+================================================================================
+
+The singularity image used here is too large to be included. However, the
+00scripts directory contains the definition file you can use to build the
+container.

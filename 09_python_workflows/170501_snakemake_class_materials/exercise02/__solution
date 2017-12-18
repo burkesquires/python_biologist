@@ -1,0 +1,37 @@
+# vim: set ft=python:
+
+###
+### Exercise 2 - add threads and log sections; run in parallel
+###
+#
+# also - add params section for software versions
+
+rule all:
+    input: "02aln/ERR458495.bam",
+           "02aln/ERR458502.bam"
+
+rule clean:
+    shell:
+        """
+        rm -rf 02aln
+        """
+
+rule hisat2:
+    input: fq = "00fastq/{sample}.fastq.gz",
+           idx = "00ref/hisat_index/R64-1-1"
+    output: bam = "02aln/{sample}.bam",
+            bai = "02aln/{sample}.bam.bai"
+    threads: 4
+    log: "00log/hisat2_{sample}"
+    params: hisat_ver = "2.0.5",
+            samtools_ver = "1.4"
+    shell:
+        """
+        exec &> {log}
+        module load hisat/{params.hisat_ver} samtools/{params.samtools_ver}
+        mkdir -p 02aln
+        hisat2 -x {input.idx} -U {input.fq} --threads {threads} \
+          | samtools sort -T tmp/{wildcards.sample} -O BAM \
+          > {output.bam}
+        samtools index {output.bam}
+        """

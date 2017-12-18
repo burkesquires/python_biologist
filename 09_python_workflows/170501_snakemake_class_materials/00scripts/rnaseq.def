@@ -1,0 +1,86 @@
+BootStrap: docker
+From: continuumio/miniconda3:latest
+
+################################################################################
+%setup
+################################################################################
+cp $PWD/rnaseq_env.yml $SINGULARITY_ROOTFS/opt/rnaseq_env.yml
+
+################################################################################
+%post
+################################################################################
+
+cat > /etc/locale.gen <<EOF
+en_US.UTF-8 UTF-8
+EOF
+apt-get update
+apt-get -y install locales
+
+export PATH=/opt/conda/bin:$PATH
+cd /opt
+[ -f rnaseq_env.yml ] || exit 1
+
+# create the rnaseq environment
+conda env create -n rnaseq -f rnaseq_env.yml
+
+# clean up so image can be shrunk
+conda clean --index-cache --tarballs --yes
+
+# create the biowulf specific directories for binding file systems
+mkdir /gpfs /spin1 /gs2 /gs3 /gs4 /gs5 /gs6 /data /scratch /fdb /lscratch
+
+# set up the environment for the container
+cat > /environment <<EOF
+if test -z "\$SINGULARITY_INIT"; then
+    SINGULARITY_INIT=1
+    PATH=/opt/conda/envs/rnaseq/bin:/opt/conda/bin:/bin:/usr/bin
+    PS1="Singularity.$SINGULARITY_CONTAINER> $PS1"
+    LANG=en_US.UTF-8
+    CONTAINER_VER=0.1
+    CONDA_DEFAULT_ENV=rnaseq
+    CONDA_PREFIX=/opt/conda/envs/rnaseq
+    ANACONDA_HOME=/opt/conda
+    export PATH PS1 SINGULARITY_INIT LANG CONTAINER_VER ANACONDA_HOME CONDA_DEFAULT_ENV CONDA_PREFIX
+fi
+EOF
+
+################################################################################
+%runscript
+################################################################################
+
+function usage {
+    cat <<EOF
+NAME
+    rnaseq-tools
+
+SYNOPSIS
+    rnaseq-tools cmd [cmd-options]
+
+DESCRIPTION
+    Singularity container with rnaseq tools.
+
+    cmd:  help, list, or an exectuable to call
+EOF
+exit
+}
+
+function list_packages {
+    conda list
+    exit
+}
+
+cmd=${1:-none}
+cmdl=$(echo "$cmd" | tr '[:upper:]' '[:lower:]')
+
+[[ "$cmdl" == "none" || "$cmdl" == "help" ]] && usage
+[[ "$cmdl" == "list" ]] && list_packages
+
+shift
+$cmd "$@"
+
+################################################################################
+%test
+################################################################################
+. /environment
+conda list
+
