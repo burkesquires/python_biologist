@@ -4,11 +4,9 @@
 
 These seminars are presented to researchers on the National Institutes of Health (NIH) campus in Bethesda, Maryland.
 
-For those interested in previous versions of this material please see the dropbox location at: http://bit.ly/nih-python
 
-### Webinar information:
+These seminars have been recorded. Please see our Bioinformatics portal for more seminars, seminar recordings and training materials at http://bioinformatics.niaid.nih.gov
 
-https://attendee.gotowebinar.com/register/5029139083507878915
 
 NIAID / NIH Python Programming Seminar Series
 
@@ -28,8 +26,7 @@ __Dates and topics__:
 - Biomedical Data Storage and Retrieval (using SQL & NoSQL) - January 10 (9:30-12:30)
 - Becoming a Reproducible Scientist - January 29, 31 (9:30-12:30)
 
-
-These seminars will be recorded. Please see our Bioinformatics portal for more seminars, seminar recordings and training materials at http://bioinformatics.niaid.nih.gov
+For those interested in previous versions of this material please see the dropbox location at: http://bit.ly/nih-python
 
 
 Regards,
