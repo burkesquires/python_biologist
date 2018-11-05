@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bioconda, UpSetR, and Snakemake</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Twitter Card -->
+	<!-- Ref: https://dev.twitter.com/cards/types/summary-large-image -->
+	<!--
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@ccwang002">
+	<meta name="twitter:creator" content="@ccwang002">
+	<meta name="twitter:title" content="Genomics in R">
+	<meta name="twitter:description" content="An intrdouction of using R/Bioconductor to explore genomic annotaions, covering usage of OrgDB, TxDb, OrganismDb, BSgenome, and GenomicRanges.">
+	<meta name="twitter:image" content="https://blog.liang2.tw/2016Talk-Genomics-in-R/pics/modPlot_GAPDH.png">
+	-->
+	<!-- Icon -->
+	<link href="pics/twR_logo.png" rel="icon" type="image/x-icon" />
+	<!-- CSS Stle -->
+	<link rel="stylesheet" href="lib/shower/themes/styles/screen-16x10.css">
+	<link rel="stylesheet" href="lib/highlight/styles/github.css" type="text/css"/>
+	<style>
+		.caption p {
+			font-size: 0.6em;
+		}
+		.slide.mid h2 {
+			font-size: 110px;
+			font-family: Roboto Light;
+			font-weight: 300;
+			color: white;
+			line-height: 1.25em;
+			text-shadow: 1px 1px 3px black;
+			top: 36%;
+			position: absolute;
+		}
+		.citation pre {
+			text-align: left;
+		}
+		pre.medium {
+			font-size: 0.75em;
+		}
+		pre.medium code {
+			line-height: 1.5em;
+		}
+		pre.small {
+			font-size: 0.5em;
+		}
+		pre.small code {
+			line-height: 1.5em;
+		}
+
+		.sidenote {
+			border: 2px dashed #9e9e9e;
+			position: absolute;
+			padding: 1em;
+			line-height: 1.5em;
+			color: #9e9e9e;
+		}
+		.sidenote p {
+			margin-bottom: 0px;
+		}
+
+	</style>
+</head>
+<body class="shower list">
+	<!-- Header in overview -->
+	<header class="caption">
+		<h1>Bioconda, UpSetR, and Snakemake</h1>
+		<p><a href="http://liang2.tw">Liang-Bo Wang (亮亮)</a>, 2016-12-27</p>
+	</header>
+
+	<!-- Cover Slide -->
+	<section id="cover" class="slide no-number">
+		<h2 id="talk-header">Bioconda, UpSetR, and Snakemake</h2>
+		<p id="talk-author">
+			By <a href="http://liang2.tw" target="_blank">Liang<sup>2</sup></a> under CC 4.0 BY license
+		</p>
+		<p id="usage-instr">
+			<kbd>Esc</kbd> to overview <br>
+			<kbd>←</kbd> <kbd>→</kbd> to navigate
+		</p>
+		<img src="pics/cover.jpg" class="cover w" alt="">
+		<style>
+			#talk-header,
+			#talk-author {
+				left: 56px;
+			}
+			#talk-header {
+				color: #EEE;
+				text-align: left;
+				font-size: 100px;
+				line-height: 1.3em;
+				text-shadow: -1px 1px 3px #000;
+				bottom: 160px;
+				position: absolute;
+
+			}
+			#talk-author {
+				line-height: 1.2em;
+				text-shadow: -1px 1px 3px #000;
+				left: 65px;
+				bottom: 120px;
+				position: absolute;
+			}
+			#talk-author a {
+				color: #FFFA20;
+			}
+			#cover p {
+				margin: 10px 0 0;
+				color: #FFF;
+				font-size: 32px;
+				opacity: 1;
+			}
+			#usage-instr {
+				position: absolute;
+				text-align: right;
+				right: 30px;
+				bottom: 40px;
+			}
+			#usage-instr kbd {
+				opacity: 0.8;
+				color: #666;
+				background-color: white;
+			}
+			#cover img {
+				opacity: 0.95;
+			}
+			#cover {
+				background: black;
+			}
+		</style>
+	</section>
+
+	<!-- Outline
+
+	- Intro conda
+		- conda environment
+		- requirement
+		- channel
+			- conda-forge
+		- conda with r
+	- Intro bioconda
+		- channels
+		- r packages on bioconductor
+
+	- My R package is not included ...
+
+	- UpSetR
+		 conda install -c bioconda r-upsetr
+
+	- Snakemake
+
+	-->
+	<!-- Section: (Bio)conda -->
+	<section id="sec-bioconda" class="slide">
+		<h2 class="shout">(Bio)conda</h2>
+	</section>
+
+	<section id="bioinfo-use-r-and-py" class="slide">
+		<h2>R & Python are used together in bioinfo</h2>
+		<p>My personal preference for an analysis pipeline:</p>
+		<ul>
+			<li>In Python,</li>
+				<ul>
+					<li>Raw data parsing</li>
+					<li>Job batching and general scripting</li>
+				</ul>
+			<li>In R,</li>
+				<ul>
+					<li>Statistical inference and modeling</li>
+					<li>Genomic annotation lookup</li>
+				</ul>
+		</ul>
+	</section>
+
+	<section id="reproducibility" class="slide">
+		<h2>Project-wise environment isolation</h2>
+		<ul>
+			<li>How to maintain a local instead of system-wide installation?</li>
+				<ul>
+					<li>Large cluster without root permission</li>
+					<li>To try / develop / debug a specific tool</li>
+				</ul>
+			<li>How to fix R version for different projects?</li>
+			<li>How to isolate different package dependencies?</li>
+				<ul>
+					<li>Actually, changing <a href="blog.revolutionanalytics.com/2015/11/r-projects.html"><code>.libPaths()</code></a> will do</li>
+				</ul>
+			<li>Those issues apply to Python too</li>
+		</ul>
+		<p class="next">
+			More importantly, how to create <strong>isolation for both Python and R</strong>?
+		</p>
+	</section>
+
+	<section id="conda" class="slide">
+		<h2><img src="pics/conda_logo.svg" alt="conda"> manages everything</h2>
+		<ul>
+			<li>Originally developed as an extended Python package manager</li>
+			<li>Developed by Continuum Analytics as an open source project</li>
+			<li>Conda manages not only python packages, but also their dependent libraries (e.g., libxml, mkl, and jdk)</li>
+			<li>Packages are shipped in compiled binaries, saving deployment time</li>
+			<li>An extended "virtual environment"</li>
+		</ul>
+		<style>
+			#conda h2 > img {
+				height: 1em;
+			}
+		</style>
+	</section>
+
+	<section id="install-conda" class="slide">
+		<h2>Install conda itself</h2>
+		<p>(Well, it is pretty much a "Python" thing...)</p>
+		<ul>
+			<li>With/Without packages pre-shipped: <a href="https://www.continuum.io/downloads">Anaconda</a> and <a href="http://conda.pydata.org/miniconda.html">Miniconda</a></li>
+			<li>Different default Python version: 2.7 and 3.5+</li>
+		</ul>
+		<p>No matter what version one installed, all can create identical environments</p>
+		<p class="note">Conda be installed by <a href="https://github.com/yyuu/pyenv">pyenv</a>.</p>
+	</section>
+
+	<section id="conda-usage" class="slide">
+		<h2>Conda usage</h2>
+		<pre class="language-bash">
+<code>conda install numpy matplotlib  # install new packages
+conda list                # list installed packages
+conda update              # check if newer version exists
+conda remove numpy scipy  # remove packages
+conda clean --all         # clean caches and unused packages</code>
+		</pre>
+	</section>
+
+	<section id="conda-env" class="slide">
+		<h2>Conda environment</h2>
+		<p>Create isolated environments using different python version and installed packages, managed via <code>conda env ...</code></p>
+		<pre class="language-bash">
+<code>$ conda create -n VENV_NAME python=3.5  # create a new env
+$ source activate VENV_NAME  # activate env
+(VENV_NAME) $                # inside the isolated env
+(VENV_NAME) $ conda install ...
+(VENV_NAME) $ deactivate
+$ </code>
+		</pre>
+	</section>
+
+	<section id="conda-channels" class="slide">
+		<h2>Conda channels</h2>
+		<ul>
+			<li>Channel contains a set of packages that are not shipped by default</li>
+				<ul>
+					<li>Only some popular packages are officially maintained</li>
+					<li>R settings should not mess with the default Python channel</li>
+				</ul>
+			<li>Popular channels:</li>
+			<ul>
+				<li><a href="https://conda-forge.github.io/">conda-forge</a>: community driven channels</li>
+				<li><a href="https://anaconda.org/r/">r</a>: for R</li>
+				<li><a href="https://anaconda.org/bioconda/">bioconda</a>: for biology-related tools</li>
+			</ul>
+		</ul>
+	</section>
+
+	<section id="conda-r" class="slide">
+		<h2>Manage R environment using conda</h2>
+		<p>
+			R itself and r packages are available in <a href="https://anaconda.org/r">r channel</a>.
+			All related dependencies are managed and automatically installed.
+		</p>
+		<pre class="language-bash">
+<code># plain r installation
+conda install --channel r <mark>r</mark>
+# install new R package (ex. ggplot2)
+conda install --channel r <mark>r-ggplot2</mark></code>
+		</pre>
+		<p>Multiple R versions or settings can exist in separate conda environments.</p>
+	</section>
+
+	<section id="bioconda" class="slide">
+		<h2><img src="pics/bioconda.png" alt="bioconda"></h2>
+		<ul>
+			<li>In Bioinformatics both R and Python are heavily used, including several C/C++ based libraries</li>
+			<li>Manually managing the dependencies for R/Py/external packages is hard</li>
+			<li>By using conda, all of them can be version controlled together</li>
+			<li>Currently &gt;1,500 packages are ready to use</li>
+		</ul>
+		<style>
+			#bioconda h2 > img {
+				height: 1.5em;
+			}
+		</style>
+	</section>
+
+	<section id="bioconda-setup" class="slide">
+		<h2>Bioconda setup</h2>
+		<pre class="language-text">
+<code>conda config --add channels conda-forge
+conda config --add channels defaults
+conda config --add channels r
+conda config --add channels bioconda</code>
+		</pre>
+		<p>Note that the order of the channels the order of package discovery.</p>
+	</section>
+
+	<section id="bioconda-usage" class="slide">
+		<h2>Bioconda usage</h2>
+		<pre class="language-bash">
+<code>conda install bwa bowtie       # install non-py/r tools
+conda install samtools=0.1.19  # specify tool version
+conda install r-upsetr       # install r pkg
+conda install bioconductor-rsamtools  # r pkg on bioconductor</code>
+		</pre>
+		<ul>
+			<li><a href="https://bioconda.github.io/recipes.html">Here</a> lists all bioconda receipts(packages)</li>
+		</ul>
+	</section>
+
+	<section id="bioconda-receipt-example" class="slide tighter">
+		<div class="citation">
+			<img class="fill w" src="pics/bioconda_receipt_example.png" alt="">
+			<p>Ref: <a href="https://bioconda.github.io/recipes/bioconductor-rsamtools/README.html">Receipt information page for r package rsamtools on Bioconductor</a></p>
+		</div>
+	</section>
+
+	<section id="bioconda-new-package" class="slide">
+		<h2>What if my packages are not supported?</h2>
+		<ul>
+			<li>Bioconda has an detailed <a href="https://bioconda.github.io/contributing.html">guide</a> for creating a new receipt for your package.</li>
+			<li>Skeletons for Python/CRAN/Bioconductor/Java/Perl/... tool</li>
+			<li>Travis CI / Docker to test the building</li>
+			<li>More info on <a href="https://bioconda.github.io/contributing.html">its documentation</a></li>
+		</ul>
+	</section>
+
+	<!-- Section: UpSetR -->
+	<section class="slide">
+		<h2 class="shout">UpSetR</h2>
+	</section>
+
+	<section id="vis-set-intersec" class="slide">
+		<h2>Visualizing intersecting sets</h2>
+		<p>What visualization will you use to visualize the intersection of sets?</p>
+		<ul>
+			<li>For example, how results produced by 3 algorithms overlap with each other</li>
+			<li>An example in genomics: comparison of mutation called by different tools</li>
+		</ul>
+		<p class="next">Use <a href="https://en.wikipedia.org/wiki/Venn_diagram">Venn diagram</a>!</p>
+	</section>
+
+	<section id="venn-diagram" class="slide">
+		<h2>Plot a Venn diagram</h2>
+		<p>There are multiple online / R tools:</p>
+		<ul>
+			<li><a href="http://www.interactivenn.net/index.html">InteractiVenn</a> by Heberle <i>et al.</i></li>
+			<li><a href="http://www.cmbi.ru.nl/cdd/biovenn/">BioVenn</a> by Hulsen <i>et al.</i></li>
+			<li><a href="http://bioinfo.genotoul.fr/jvenn/">jvenn</a> by Bardou <i>et al.</i></li>
+			<li><a href="https://cran.r-project.org/web/packages/VennDiagram/index.html">ViennDiagram</a> on CRAN</li>
+			<li><a href="https://cran.r-project.org/web/packages/gplots/index.html">gplots</a> on CRAN</li>
+		</ul>
+	</section>
+
+	<section id="venn-2-and-3-sets" class="slide twocol">
+		<h2>Number of sets = 2 or 3</h2>
+		<div class="left">
+			<img class="fill w" src="pics/set2.svg" alt="N = 2">
+		</div>
+		<div class="right">
+			<img class="fill w" src="pics/set3.svg" alt="N = 3">
+		</div>
+	</section>
+
+	<section id="venn-4-and-5-sets" class="slide twocol">
+		<h2>N = 4 or 5</h2>
+		<div class="left">
+			<img class="fill w" src="pics/set4.svg" alt="N = 4">
+		</div>
+		<div class="right">
+			<img class="fill w" src="pics/set5.svg" alt="N = 5">
+		</div>
+	</section>
+
+	<section id="venn-6-sets" class="slide tighter">
+		<div class="citation left">
+			<img src="pics/banana.png" alt="">
+			<p>Ref: D’Hont <i>et al.</i> (2012)
+				<a href="http://www.nature.com/nature/journal/v488/n7410/full/nature11241.html">
+					The banana (<i>Musa acuminata</i>) genome and the evolution of monocotyledonous plants.
+				</a> Nature <i>488</i>, 213–217
+			</p>
+		</div>
+		<style>
+			#venn-6-sets .citation > img {
+				width: 90%;
+				margin-top: -1em;
+			}
+		</style>
+	</section>
+
+	<section id="venn-not-practical" class="slide">
+		<h2>Venn diagram not practical for N ≥ 6</h2>
+		<ul>
+			<li>The shape is too complicated to comprehend</li>
+			<li>Shapes are fixed and cannot be proportional to the set size</li>
+			<li>Hard to tell which interaction is important</li>
+			<li>Most packages don't support beyond 6 sets</li>
+		</ul>
+	</section>
+
+	<section id="upset" class="slide tighter">
+		<h2><a href="http://www.caleydo.org/tools/upset/">UpSet</a>: a novel vis for set interaction</h2>
+		<img src="pics/upsetr.png" alt="">
+
+		<style>
+			#upset > img {
+				width: 85%;
+			}
+		</style>
+	</section>
+
+	<section id="how-to-read-upset" class="slide twocol l75">
+		<h2>How to read UpSet plot</h2>
+		<div class="left">
+			<ul>
+				<li>Connections of dots represent different set intersection</li>
+				<li>Each bar map to each intersection</li>
+				<li>Order intersections by their size</li>
+				<li>Intersections can be clipped to reduce complexity</li>
+			</ul>
+		</div>
+		<div class="right">
+			<div class="citation">
+				<img src="pics/upset_matrix.png" alt="">
+				<p>Ref: <a href="http://www.caleydo.org/tools/upset/">UpSet</a> official website</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="banana-upsetr-redraw" class="slide tighter">
+		<img class="fill w" src="pics/upsetr-banana_clipped.png" alt="">
+		<h2>The banana plot redrawn</h2>
+		<style>
+			#banana-upsetr-redraw h2 {
+				position: absolute;
+				top: 10%;
+				right: 10%;
+			}
+		</style>
+	</section>
+
+	<section id="upset-tools" class="slide twocol">
+		<h2>UpSet tools</h2>
+		<div class="left">
+			<ul>
+				<li><a href="http://vcg.github.io/upset/">UpSet</a>: Web online version</li>
+				<li><a href="https://github.com/hms-dbmi/UpSetR">UpSetR</a>: R package</li>
+				<li><a href="https://gehlenborglab.shinyapps.io/upsetr/">UpSetR Shiny version</a></li>
+				<li><a href="https://github.com/ImSoErgodic/py-upset">pyUpSet</a>: Python package</li>
+			</ul>
+		</div>
+		<div class="right">
+			<div class="citation">
+				<img class="fill w" src="pics/upset_web.png" alt="">
+				<p>Ref: Web version of UpSet using example Fruit dataset.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section: Snakemake -->
+	<section class="slide">
+		<h2 class="shout">Snakemake</h2>
+	</section>
+
+	<section id="pipeline-example" class="slide tighter">
+		<h2>An analysis pipeline</h2>
+		<pre class="language-bash">
+<code>bwa mem <mark>genome.fa</mark> <mark>A.fastq</mark> | \
+    samtools view -Sb - > mapped_reads/A.bam
+samtools sort -T sorted_reads/A \
+    -O bam mapped_reads/A.bam > sorted_reads/A.bam
+samtools index sorted_reads/A.bam  # generate A.bam.bai
+
+# repeat for A, B, C fastq
+samtools mpileup -g -f genome.fa {A,B,C}.bam | \
+    bcftools call -mv - > calls/all.vcf</code>
+		</pre>
+	</section>
+
+	<section id="pipeline-example-cont" class="slide tighter">
+		<h2>Pipeline by a bash script</h2>
+		<pre class="language-bash">
+<code>fastq=( "A.fastq" "B.fastq" "C.fastq" )
+for i in "${fastq[@]}"; do
+    # generate mapped.bam
+    # generate sorted.bam
+    # generate sorted.bam.index
+done
+
+samtools mpileup -g -f genome.fa sorted_reads/{A,B,C}.bam | \
+    bcftools call -mv - > calls/all.vcf</code>
+		</pre>
+	</section>
+
+	<section id="pipeline-problem" class="slide">
+		<h2>Problem for bash script</h2>
+		<ul>
+			<li>Always rerun from the beginning even when only a few of the inputs or intermediate files are altered</li>
+			<li>Manual parallelization</li>
+			<li>Scripts are hard to reuse</li>
+		</ul>
+	</section>
+
+	<section class="slide twocol l80" >
+		<div class="left">
+		<h2>Snakemake</h2>
+<pre class="language-snakemake"><code>rule bwa_map:
+    input:
+        "data/genome.fa",
+        "data/samples/{sample}.fastq"
+    output:
+        "mapped_reads/{sample}.bam"
+    shell:
+        "bwa mem {input} | samtools view -Sb - > {output}"</code></pre>
+		</div>
+		<div class="right">
+			<img src="pics/dag_rule.svg" alt="">
+		</div>
+	</section>
+
+	<section class="slide twocol l75">
+		<h2>Job dependency DAG graph</h2>
+		<div class="left">
+		<img src="pics/dag.svg" alt="">
+		</div>
+		<div class="right">
+			<ul>
+				<li>Independent jobs can be parallelized</li>
+				<br>
+				<li>Dotted jobs are complete; wont rerun</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Extra goodies</h2>
+		<ul>
+			<li>Submit jobs as cluster jobs (bsub, qsub, LSF, SLURM and etc)</li>
+			<li>Logging</li>
+			<li>Remote (S3, Dropbox and etc), temporary files</li>
+			<li>Reusable rules</li>
+			<li>Automatically build necessary conda env (3.9+)</li>
+		</ul>
+	</section>
+
+	<!-- Section: About me -->
+	<section id="about-me" class="slide no-number twocol l60">
+		<div class="left">
+			<h2>About Me</h2>
+			<ul>
+				<li>亮亮, Liang<sup>2</sup> or Bobo</li>
+				<li>Computational Biology PhD student at Washington Univsity in St. Louis (WUSTL)</li>
+				<li>Speak Python and R</li>
+				<li>Staff of PyCon TW 2014&ndash;2016</li>
+				<li>Current open source project:<br>
+					<a href="https://docs.python.org.tw/3/">Python official doc translation</a></li>
+			</ul>
+		</div>
+		<div class="right">
+			<img class="fill w" src="pics/me.jpg" alt="">
+		</div>
+	</section>
+
+	<!-- End Slide -->
+	<section id='end' class='slide no-number'>
+		<h2>Q&A</h2>
+		<img src="pics/end.jpg" class="cover w" alt="">
+		<style>
+			#end h2 {
+				position: absolute;
+				left: 10%;
+				top: 18%;
+				color: rgb(104, 135, 52);
+				text-align: right;
+				text-shadow: none;
+				font-size: 150px;
+			}
+		</style>
+	</section>
+
+	<!-- END OF SLIDE CONTENT -->
+	<!--
+	To hide progress bar from entire presentation
+	just remove “progress” element.
+	-->
+	<div class="progress"></div>
+	<footer class="badge">
+		<a href="https://github.com/ccwang002/2016Talk-Bioconda-UpSetR-Snakemake">
+			<svg viewBox="0 0 81 79" aria-hidden="true">
+				<path d="M40.5 0a40.5 40.5 0 0 0-12.8 78.93c2 .37 2.76-.88 2.76-2s0-3.51-.05-6.89c-11.27 2.45-13.64-5.43-13.64-5.43-1.84-4.68-4.5-5.92-4.5-5.92-3.68-2.51.28-2.46.28-2.46 4.06.29 6.2 4.17 6.2 4.17 3.61 6.19 9.48 4.4 11.79 3.37a8.65 8.65 0 0 1 2.57-5.41c-9-1-18.45-4.5-18.45-20a15.65 15.65 0 0 1 4.17-10.87 14.57 14.57 0 0 1 .4-10.72s3.4-1.09 11.14 4.15a38.39 38.39 0 0 1 20.28 0c7.73-5.24 11.13-4.15 11.13-4.15a14.55 14.55 0 0 1 .4 10.72 15.63 15.63 0 0 1 4.16 10.87c0 15.56-9.47 19-18.49 20 1.45 1.25 2.75 3.72 2.75 7.5v11.11c0 1.08.73 2.34 2.78 1.95A40.51 40.51 0 0 0 40.5 0z"/>
+			</svg>
+			Sources<br>on GitHub
+		</a>
+	</footer>
+
+	<!-- Library -->
+	<script src="lib/shower/shower.min.js"></script>
+	<script src="lib/highlight/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+	<!-- Mathjax -->
+	<!-- online Mathjax CDN -->
+	<!--<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+</body>
+</html>

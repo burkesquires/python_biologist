@@ -1,0 +1,7 @@
+data/
+mapped_reads/
+sorted_reads/
+calls/
+*.sqlite
+*.sqlite3
+.snakemake/
