@@ -2,7 +2,7 @@
 
 ---
 
-These seminars are presented to researchers at the National Institutes of Health (NIH) campus in Bethesda, Maryland.
+These seminars are presented to researchers at the National Institutes of Health (NIH) campus in Bethesda, Maryland in 2018.
 
 These seminars have been recorded. Please see the NIAID Bioinformatics Portal for the recordings of these seminars and more training materials at http://bioinformatics.niaid.nih.gov
 
