@@ -6,7 +6,6 @@ To setup your computer to write programs using the python programming language (
 
 - Install the distribution in your home directory. You should not need any admin privileges for this.
 
-
 To start the Jupyter notebook:
 
 - From the terminal type "jupyter lab" or
