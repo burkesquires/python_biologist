@@ -1,0 +1,24 @@
+dist: xenial
+language: python
+
+sudo: false
+
+matrix:
+  include:
+    - python: "3.7"
+      env: TOXENV=ci37
+    - python: "3.8"
+      env: TOXENV=ci38
+
+cache:
+  - pip
+
+install:
+  - pip install tox
+  - pip install codecov
+
+script:
+  - tox
+
+after_success:
+  - codecov
