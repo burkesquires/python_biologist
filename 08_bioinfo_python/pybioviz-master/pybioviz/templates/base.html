@@ -1,0 +1,23 @@
+{% extends base %}
+
+<!-- goes in body -->
+{% block postamble %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+{% endblock %}
+
+<!-- goes in body -->
+{% block contents %}
+<h1>pybioviz</h1>
+<p>https://github.com/dmnfarrell/pybioviz</p>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      {{ embed(roots.A) }}
+    </div>
+    <div class="col-sm">
+      {{ embed(roots.B) }}
+    </div>      
+  </div>
+</div>
+{% endblock %}

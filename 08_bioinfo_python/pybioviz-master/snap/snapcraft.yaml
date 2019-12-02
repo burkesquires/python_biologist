@@ -1,0 +1,22 @@
+name: pybioviz
+version: 'latest'
+#version-script: git describe --abbrev=1 --tags
+summary: bioinformatic dashboards with panel/bokeh
+description: |
+ Bioinformatics visualization tools with PyViz Panel and Bokeh. The objective is to have a set of viewers that
+ can be re-used inside notebook dashboards as part of bioinformatic workflows or deployed as local web apps.
+
+grade: stable
+confinement: strict
+icon: gui/icon.png
+
+apps:
+  pybioviz:
+    command: bin/pybioviz
+    plugs: [home,network-bind]
+
+parts:
+  pybioviz:
+    plugin: python
+    python-version: python3
+    source: ../
