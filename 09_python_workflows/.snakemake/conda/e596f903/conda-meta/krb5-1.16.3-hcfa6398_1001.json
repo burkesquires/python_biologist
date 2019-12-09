@@ -1,0 +1,1422 @@
+{
+  "build": "hcfa6398_1001",
+  "build_number": 1001,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "constrains": [],
+  "depends": [
+    "libcxx >=4.0.1",
+    "libedit >=3.1.20170329,<4.0a0",
+    "openssl >=1.1.1a,<1.1.2a",
+    "tk >=8.6.9,<8.7.0a0"
+  ],
+  "extracted_package_dir": "/Users/squiresrb/anaconda3/pkgs/krb5-1.16.3-hcfa6398_1001",
+  "features": "",
+  "files": [
+    "bin/compile_et",
+    "bin/gss-client",
+    "bin/k5srvutil",
+    "bin/kadmin",
+    "bin/kdestroy",
+    "bin/kinit",
+    "bin/klist",
+    "bin/kpasswd",
+    "bin/krb5-config",
+    "bin/kswitch",
+    "bin/ktutil",
+    "bin/kvno",
+    "bin/sclient",
+    "bin/sim_client",
+    "bin/uuclient",
+    "include/com_err.h",
+    "include/gssapi.h",
+    "include/gssapi/gssapi.h",
+    "include/gssapi/gssapi_ext.h",
+    "include/gssapi/gssapi_generic.h",
+    "include/gssapi/gssapi_krb5.h",
+    "include/gssapi/mechglue.h",
+    "include/gssrpc/auth.h",
+    "include/gssrpc/auth_gss.h",
+    "include/gssrpc/auth_gssapi.h",
+    "include/gssrpc/auth_unix.h",
+    "include/gssrpc/clnt.h",
+    "include/gssrpc/netdb.h",
+    "include/gssrpc/pmap_clnt.h",
+    "include/gssrpc/pmap_prot.h",
+    "include/gssrpc/pmap_rmt.h",
+    "include/gssrpc/rename.h",
+    "include/gssrpc/rpc.h",
+    "include/gssrpc/rpc_msg.h",
+    "include/gssrpc/svc.h",
+    "include/gssrpc/svc_auth.h",
+    "include/gssrpc/types.h",
+    "include/gssrpc/xdr.h",
+    "include/kadm5/admin.h",
+    "include/kadm5/chpass_util_strings.h",
+    "include/kadm5/kadm_err.h",
+    "include/kdb.h",
+    "include/krad.h",
+    "include/krb5.h",
+    "include/krb5/ccselect_plugin.h",
+    "include/krb5/certauth_plugin.h",
+    "include/krb5/clpreauth_plugin.h",
+    "include/krb5/hostrealm_plugin.h",
+    "include/krb5/kadm5_auth_plugin.h",
+    "include/krb5/kadm5_hook_plugin.h",
+    "include/krb5/kdcpolicy_plugin.h",
+    "include/krb5/kdcpreauth_plugin.h",
+    "include/krb5/krb5.h",
+    "include/krb5/localauth_plugin.h",
+    "include/krb5/locate_plugin.h",
+    "include/krb5/plugin.h",
+    "include/krb5/preauth_plugin.h",
+    "include/krb5/pwqual_plugin.h",
+    "include/profile.h",
+    "include/verto-module.h",
+    "include/verto.h",
+    "lib/krb5/plugins/kdb/db2.so",
+    "lib/krb5/plugins/preauth/otp.so",
+    "lib/krb5/plugins/preauth/pkinit.so",
+    "lib/krb5/plugins/preauth/test.so",
+    "lib/krb5/plugins/tls/k5tls.so",
+    "lib/libcom_err.3.0.dylib",
+    "lib/libcom_err.3.dylib",
+    "lib/libcom_err.dylib",
+    "lib/libgssapi_krb5.2.2.dylib",
+    "lib/libgssapi_krb5.2.dylib",
+    "lib/libgssapi_krb5.dylib",
+    "lib/libgssrpc.4.2.dylib",
+    "lib/libgssrpc.4.dylib",
+    "lib/libgssrpc.dylib",
+    "lib/libk5crypto.3.1.dylib",
+    "lib/libk5crypto.3.dylib",
+    "lib/libk5crypto.dylib",
+    "lib/libkadm5clnt.dylib",
+    "lib/libkadm5clnt_mit.11.0.dylib",
+    "lib/libkadm5clnt_mit.11.dylib",
+    "lib/libkadm5clnt_mit.dylib",
+    "lib/libkadm5srv.dylib",
+    "lib/libkadm5srv_mit.11.0.dylib",
+    "lib/libkadm5srv_mit.11.dylib",
+    "lib/libkadm5srv_mit.dylib",
+    "lib/libkdb5.9.0.dylib",
+    "lib/libkdb5.9.dylib",
+    "lib/libkdb5.dylib",
+    "lib/libkrad.0.0.dylib",
+    "lib/libkrad.0.dylib",
+    "lib/libkrad.dylib",
+    "lib/libkrb5.3.3.dylib",
+    "lib/libkrb5.3.dylib",
+    "lib/libkrb5.dylib",
+    "lib/libkrb5support.1.1.dylib",
+    "lib/libkrb5support.1.dylib",
+    "lib/libkrb5support.dylib",
+    "lib/libverto.0.0.dylib",
+    "lib/libverto.0.dylib",
+    "lib/libverto.dylib",
+    "lib/pkgconfig/gssrpc.pc",
+    "lib/pkgconfig/kadm-client.pc",
+    "lib/pkgconfig/kadm-server.pc",
+    "lib/pkgconfig/kdb.pc",
+    "lib/pkgconfig/krb5-gssapi.pc",
+    "lib/pkgconfig/krb5.pc",
+    "lib/pkgconfig/mit-krb5-gssapi.pc",
+    "lib/pkgconfig/mit-krb5.pc",
+    "sbin/gss-server",
+    "sbin/kadmin.local",
+    "sbin/kadmind",
+    "sbin/kdb5_util",
+    "sbin/kprop",
+    "sbin/kpropd",
+    "sbin/kproplog",
+    "sbin/krb5-send-pr",
+    "sbin/krb5kdc",
+    "sbin/sim_server",
+    "sbin/sserver",
+    "sbin/uuserver",
+    "share/et/et_c.awk",
+    "share/et/et_h.awk",
+    "share/examples/krb5/kdc.conf",
+    "share/examples/krb5/krb5.conf",
+    "share/examples/krb5/services.append",
+    "share/man/man1/compile_et.1",
+    "share/man/man1/k5srvutil.1",
+    "share/man/man1/kadmin.1",
+    "share/man/man1/kdestroy.1",
+    "share/man/man1/kinit.1",
+    "share/man/man1/klist.1",
+    "share/man/man1/kpasswd.1",
+    "share/man/man1/krb5-config.1",
+    "share/man/man1/ksu.1",
+    "share/man/man1/kswitch.1",
+    "share/man/man1/ktutil.1",
+    "share/man/man1/kvno.1",
+    "share/man/man1/sclient.1",
+    "share/man/man5/.k5identity.5",
+    "share/man/man5/.k5login.5",
+    "share/man/man5/k5identity.5",
+    "share/man/man5/k5login.5",
+    "share/man/man5/kadm5.acl.5",
+    "share/man/man5/kdc.conf.5",
+    "share/man/man5/krb5.conf.5",
+    "share/man/man7/kerberos.7",
+    "share/man/man8/kadmin.local.8",
+    "share/man/man8/kadmind.8",
+    "share/man/man8/kdb5_ldap_util.8",
+    "share/man/man8/kdb5_util.8",
+    "share/man/man8/kprop.8",
+    "share/man/man8/kpropd.8",
+    "share/man/man8/kproplog.8",
+    "share/man/man8/krb5kdc.8",
+    "share/man/man8/sserver.8"
+  ],
+  "fn": "krb5-1.16.3-hcfa6398_1001.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/Users/squiresrb/anaconda3/pkgs/krb5-1.16.3-hcfa6398_1001",
+    "type": 1
+  },
+  "md5": "7ab2fb212f6af5386de6c45e7f6823bc",
+  "name": "krb5",
+  "package_tarball_full_path": "/Users/squiresrb/anaconda3/pkgs/krb5-1.16.3-hcfa6398_1001.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/compile_et",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "27ff63a8ec8c3011435812bb30b6dfd770d5186dea06ccff293983c00c12bb7d",
+        "sha256_in_prefix": "5fa449c4123f0bfe8efa74851bcc766d82a1efa673e0ebd0347a75df21ed138d",
+        "size_in_bytes": 845
+      },
+      {
+        "_path": "bin/gss-client",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "6411e9904231fa6ad2c5a11a02efe0ab573ba4a0630286b62739fa0673bde784",
+        "sha256_in_prefix": "9d391304e7f9177e0ea40e3afe48f9fda6cfd08e6d163a212d5823af01c4a5fb",
+        "size_in_bytes": 24652
+      },
+      {
+        "_path": "bin/k5srvutil",
+        "path_type": "hardlink",
+        "sha256": "d44b92e0c847223da03e6eecfcb0aafb02eb87e7bbbb4db60d31ccfb088d0f7b",
+        "sha256_in_prefix": "d44b92e0c847223da03e6eecfcb0aafb02eb87e7bbbb4db60d31ccfb088d0f7b",
+        "size_in_bytes": 2004
+      },
+      {
+        "_path": "bin/kadmin",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "65ece18e27f4af9a8aa08785de38cc1f28ed30ff226436769371f934f8534ff0",
+        "sha256_in_prefix": "8471926ece27e3cd1d8675d2e7e0eb104030fdb3d3d2da65800664c596239c3c",
+        "size_in_bytes": 88300
+      },
+      {
+        "_path": "bin/kdestroy",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "6894cc5211d45d2d5e6dbf5c2114fd2d9cf5444bcaf39372c65a9878c7e60d19",
+        "sha256_in_prefix": "b380863225fb1425b308eb764a0e29d9379ec01612645a80d15e94c054353e97",
+        "size_in_bytes": 13904
+      },
+      {
+        "_path": "bin/kinit",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "0b3ac52d982d906db29e30ace9c1778190a94c0587eb9eda24b209a7cecb0fcd",
+        "sha256_in_prefix": "9b674950c91092b83e3bf5377d83788cb230a518b095b15eefb1191a33f04796",
+        "size_in_bytes": 31088
+      },
+      {
+        "_path": "bin/klist",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "632aff552ee253eea6e10dbfe97b34c8aa9814a9d049e9967ea5583ea5cf39d3",
+        "sha256_in_prefix": "aa75ce5f44328df2d4470de7bcdc4b140b1d80edfea938c4257815fade6f8fa2",
+        "size_in_bytes": 29696
+      },
+      {
+        "_path": "bin/kpasswd",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "d45111a7c024f803861767a60c3348b36d6badbb70b029a8ea0a7659c5bed872",
+        "sha256_in_prefix": "9a1b01d9f4d6650aa21a15b581c183671680ff5609e239b17a116ea6e3c14472",
+        "size_in_bytes": 14592
+      },
+      {
+        "_path": "bin/krb5-config",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "67a69f9bed9b833760a100d4315b715c86d1d4af9ebc29e15896e36579defa81",
+        "sha256_in_prefix": "4a12f961fbabb2daa1e11a22162686161a59f9db979bad42f7d0f2fcac93ecb1",
+        "size_in_bytes": 6979
+      },
+      {
+        "_path": "bin/kswitch",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "3a448c479063d1283ea6f5e624e136d3333cf6384322d1fbd07ac1da5fd5fba3",
+        "sha256_in_prefix": "9b4d83f75ba34dbcc31314127d2bff7428fe60ae59bcf6f8d035cb835c21a4a6",
+        "size_in_bytes": 13632
+      },
+      {
+        "_path": "bin/ktutil",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "f56c2d0bfd00a1ed472dd2276a4c9f64eea6896d75308ec319782857648f124b",
+        "sha256_in_prefix": "f26c1dafb9e6c532885e5d706a829b8ebbf626f50f6b5dda2254ef413d4f8ac2",
+        "size_in_bytes": 35676
+      },
+      {
+        "_path": "bin/kvno",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "499b2fac8bdbf6626887ba1940152df1254aaec37de88dbea04dcdd20ce2c6e6",
+        "sha256_in_prefix": "5698055b8645e6581148732a7dd8a7447c0cefc61d56dfbafb51dfced7ea373a",
+        "size_in_bytes": 19252
+      },
+      {
+        "_path": "bin/sclient",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "bfef77bcec1409d136411a0baad1f3d70ac33af23f38d2c75c05b3fd979db188",
+        "sha256_in_prefix": "2e31ed972511346a0f519c75da00bdbd31d38eff84f971906a011c49bd2c05c1",
+        "size_in_bytes": 18476
+      },
+      {
+        "_path": "bin/sim_client",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "58ed652300e04cba72e24cd4c82a4586eb23603f7f02e9a1cb82dc48f0a4cbd3",
+        "sha256_in_prefix": "da9c72717da697198e33fe2fd39fbd9e0db748f5b91b2cfa9fc0e9351d218c77",
+        "size_in_bytes": 18608
+      },
+      {
+        "_path": "bin/uuclient",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "69ed1d4153e7ed14c7cdaf610deaafb6a696801939f690bc66734ecb399eac93",
+        "sha256_in_prefix": "178d2b88a5072c1ebe43a310e7c376fef48fc9b2ef7180c66bca01d0af7ddced",
+        "size_in_bytes": 19184
+      },
+      {
+        "_path": "include/com_err.h",
+        "path_type": "hardlink",
+        "sha256": "7e7b77b8d2911e8caafa45c6186c4b6f894d565550c19ba262747834c3c6909a",
+        "sha256_in_prefix": "7e7b77b8d2911e8caafa45c6186c4b6f894d565550c19ba262747834c3c6909a",
+        "size_in_bytes": 1979
+      },
+      {
+        "_path": "include/gssapi.h",
+        "path_type": "hardlink",
+        "sha256": "6fca7ce46733a4388a45a5816e4b5b2746d68ad3e04f9e2c51463f134cb802fa",
+        "sha256_in_prefix": "6fca7ce46733a4388a45a5816e4b5b2746d68ad3e04f9e2c51463f134cb802fa",
+        "size_in_bytes": 181
+      },
+      {
+        "_path": "include/gssapi/gssapi.h",
+        "path_type": "hardlink",
+        "sha256": "d688eebbc1deba5df752aee033b8a80828ef126eb8abda55012c48cd3ee127e4",
+        "sha256_in_prefix": "d688eebbc1deba5df752aee033b8a80828ef126eb8abda55012c48cd3ee127e4",
+        "size_in_bytes": 29905
+      },
+      {
+        "_path": "include/gssapi/gssapi_ext.h",
+        "path_type": "hardlink",
+        "sha256": "012a0222f1cc727567deec9891b6974651d51bac4625498202f20f0929819276",
+        "sha256_in_prefix": "012a0222f1cc727567deec9891b6974651d51bac4625498202f20f0929819276",
+        "size_in_bytes": 19240
+      },
+      {
+        "_path": "include/gssapi/gssapi_generic.h",
+        "path_type": "hardlink",
+        "sha256": "b264115ba56603ceaad5e6ed5502dba2629959089391a4f18c4266c66befdc54",
+        "sha256_in_prefix": "b264115ba56603ceaad5e6ed5502dba2629959089391a4f18c4266c66befdc54",
+        "size_in_bytes": 2217
+      },
+      {
+        "_path": "include/gssapi/gssapi_krb5.h",
+        "path_type": "hardlink",
+        "sha256": "eab62b4ceb5a87ee7921e1cd0e25c17aabaeb33d1b21adbf475a3648560034eb",
+        "sha256_in_prefix": "eab62b4ceb5a87ee7921e1cd0e25c17aabaeb33d1b21adbf475a3648560034eb",
+        "size_in_bytes": 11571
+      },
+      {
+        "_path": "include/gssapi/mechglue.h",
+        "path_type": "hardlink",
+        "sha256": "abb62fd8d3c15ac357900a3f26b92e361e2601c1b921417fafd2b6802df4b1ed",
+        "sha256_in_prefix": "abb62fd8d3c15ac357900a3f26b92e361e2601c1b921417fafd2b6802df4b1ed",
+        "size_in_bytes": 1652
+      },
+      {
+        "_path": "include/gssrpc/auth.h",
+        "path_type": "hardlink",
+        "sha256": "344da573cba6fbb95524845dfdb43ca805f2f09a0dacb0345e1a34b395f1f883",
+        "sha256_in_prefix": "344da573cba6fbb95524845dfdb43ca805f2f09a0dacb0345e1a34b395f1f883",
+        "size_in_bytes": 6789
+      },
+      {
+        "_path": "include/gssrpc/auth_gss.h",
+        "path_type": "hardlink",
+        "sha256": "571caaca9ae5cf6cceec5cf7ff603571e818592c4220d62856ab624eeb25620a",
+        "sha256_in_prefix": "571caaca9ae5cf6cceec5cf7ff603571e818592c4220d62856ab624eeb25620a",
+        "size_in_bytes": 4840
+      },
+      {
+        "_path": "include/gssrpc/auth_gssapi.h",
+        "path_type": "hardlink",
+        "sha256": "4da2548b519f82b39ec503866a0795a8db5bdffc8b7327cc04aa9c0445efe6d5",
+        "sha256_in_prefix": "4da2548b519f82b39ec503866a0795a8db5bdffc8b7327cc04aa9c0445efe6d5",
+        "size_in_bytes": 4333
+      },
+      {
+        "_path": "include/gssrpc/auth_unix.h",
+        "path_type": "hardlink",
+        "sha256": "1e42fc6b44a644ca1bb5dd028f72af0e9c30848b4b469412347fdc16aecc9023",
+        "sha256_in_prefix": "1e42fc6b44a644ca1bb5dd028f72af0e9c30848b4b469412347fdc16aecc9023",
+        "size_in_bytes": 2896
+      },
+      {
+        "_path": "include/gssrpc/clnt.h",
+        "path_type": "hardlink",
+        "sha256": "659fad620169f273d26f0a118326f1e814402040d1af5ede9cb7539234ab667c",
+        "sha256_in_prefix": "659fad620169f273d26f0a118326f1e814402040d1af5ede9cb7539234ab667c",
+        "size_in_bytes": 9660
+      },
+      {
+        "_path": "include/gssrpc/netdb.h",
+        "path_type": "hardlink",
+        "sha256": "38f30d536012d5785645929e0d513378137d15476695a318b2c51db5ee7e0312",
+        "sha256_in_prefix": "38f30d536012d5785645929e0d513378137d15476695a318b2c51db5ee7e0312",
+        "size_in_bytes": 2442
+      },
+      {
+        "_path": "include/gssrpc/pmap_clnt.h",
+        "path_type": "hardlink",
+        "sha256": "76a3d4c6f9d03a0d6fdf5dccbeeedfa60d4e59e7281dabfb403fa283670d578e",
+        "sha256_in_prefix": "76a3d4c6f9d03a0d6fdf5dccbeeedfa60d4e59e7281dabfb403fa283670d578e",
+        "size_in_bytes": 3429
+      },
+      {
+        "_path": "include/gssrpc/pmap_prot.h",
+        "path_type": "hardlink",
+        "sha256": "4e60ca35f3f801c5ab8c25e327bcfc4637deac0615036d9ebe9bbca0242e74d2",
+        "sha256_in_prefix": "4e60ca35f3f801c5ab8c25e327bcfc4637deac0615036d9ebe9bbca0242e74d2",
+        "size_in_bytes": 3841
+      },
+      {
+        "_path": "include/gssrpc/pmap_rmt.h",
+        "path_type": "hardlink",
+        "sha256": "105372661463f05652cb893535de7daa2f7cba2b107e14266c7ee6339077fe0f",
+        "sha256_in_prefix": "105372661463f05652cb893535de7daa2f7cba2b107e14266c7ee6339077fe0f",
+        "size_in_bytes": 2303
+      },
+      {
+        "_path": "include/gssrpc/rename.h",
+        "path_type": "hardlink",
+        "sha256": "8f2402c067d376ec5d1b578d8fed1182d550578962bf5f4fdd4137e5b21d5df6",
+        "sha256_in_prefix": "8f2402c067d376ec5d1b578d8fed1182d550578962bf5f4fdd4137e5b21d5df6",
+        "size_in_bytes": 10913
+      },
+      {
+        "_path": "include/gssrpc/rpc.h",
+        "path_type": "hardlink",
+        "sha256": "0bca1517a1155cf35c3c09899b189c9614c5ac6e28d507e55093ba1b132c8449",
+        "sha256_in_prefix": "0bca1517a1155cf35c3c09899b189c9614c5ac6e28d507e55093ba1b132c8449",
+        "size_in_bytes": 3913
+      },
+      {
+        "_path": "include/gssrpc/rpc_msg.h",
+        "path_type": "hardlink",
+        "sha256": "3c3ee8d1960c4cf46f1fcb2247cdf4246a22990e901e7560158a74f4b1960ee6",
+        "sha256_in_prefix": "3c3ee8d1960c4cf46f1fcb2247cdf4246a22990e901e7560158a74f4b1960ee6",
+        "size_in_bytes": 5106
+      },
+      {
+        "_path": "include/gssrpc/svc.h",
+        "path_type": "hardlink",
+        "sha256": "9bc81450c2105fe79955115c04c153d6523636b067d4c8aa30f7892ea4e2246b",
+        "sha256_in_prefix": "9bc81450c2105fe79955115c04c153d6523636b067d4c8aa30f7892ea4e2246b",
+        "size_in_bytes": 11595
+      },
+      {
+        "_path": "include/gssrpc/svc_auth.h",
+        "path_type": "hardlink",
+        "sha256": "f21ba38af8239d3899a1ccb744daac2c06dcc16195a893f08ed0ce9750a12dfa",
+        "sha256_in_prefix": "f21ba38af8239d3899a1ccb744daac2c06dcc16195a893f08ed0ce9750a12dfa",
+        "size_in_bytes": 3976
+      },
+      {
+        "_path": "include/gssrpc/types.h",
+        "path_type": "hardlink",
+        "sha256": "59ebd9cbd53231f99b28b6131462820c4ada92fe57444c2be87e9d68fd91ec34",
+        "sha256_in_prefix": "59ebd9cbd53231f99b28b6131462820c4ada92fe57444c2be87e9d68fd91ec34",
+        "size_in_bytes": 3787
+      },
+      {
+        "_path": "include/gssrpc/xdr.h",
+        "path_type": "hardlink",
+        "sha256": "3992f5f3b0f201da298c793bb7aa5902e7d72951015605756bfa47a6ec9352db",
+        "sha256_in_prefix": "3992f5f3b0f201da298c793bb7aa5902e7d72951015605756bfa47a6ec9352db",
+        "size_in_bytes": 11779
+      },
+      {
+        "_path": "include/kadm5/admin.h",
+        "path_type": "hardlink",
+        "sha256": "c40b6a213a521b836116968bd80d54c453b843353a9063ba0297fa13fd0260ad",
+        "sha256_in_prefix": "c40b6a213a521b836116968bd80d54c453b843353a9063ba0297fa13fd0260ad",
+        "size_in_bytes": 20768
+      },
+      {
+        "_path": "include/kadm5/chpass_util_strings.h",
+        "path_type": "hardlink",
+        "sha256": "3b8a8166ab5b8862f92b7f97906c8f0e218937450888d95b15f27663fa774a1d",
+        "sha256_in_prefix": "3b8a8166ab5b8862f92b7f97906c8f0e218937450888d95b15f27663fa774a1d",
+        "size_in_bytes": 1572
+      },
+      {
+        "_path": "include/kadm5/kadm_err.h",
+        "path_type": "hardlink",
+        "sha256": "f111fef80f84efadf82c3b455838da93983ae49146d6c30a4b97d3e243775ae5",
+        "sha256_in_prefix": "f111fef80f84efadf82c3b455838da93983ae49146d6c30a4b97d3e243775ae5",
+        "size_in_bytes": 4369
+      },
+      {
+        "_path": "include/kdb.h",
+        "path_type": "hardlink",
+        "sha256": "7213ccbfe9ff019dce523b883735372371ed42228dc4d648b2ae29aefd6d23bc",
+        "sha256_in_prefix": "7213ccbfe9ff019dce523b883735372371ed42228dc4d648b2ae29aefd6d23bc",
+        "size_in_bytes": 61791
+      },
+      {
+        "_path": "include/krad.h",
+        "path_type": "hardlink",
+        "sha256": "c16878d9b57669f68f2d55481bf963c32e7f3c659eda34d75f66b432536f90d6",
+        "sha256_in_prefix": "c16878d9b57669f68f2d55481bf963c32e7f3c659eda34d75f66b432536f90d6",
+        "size_in_bytes": 8933
+      },
+      {
+        "_path": "include/krb5.h",
+        "path_type": "hardlink",
+        "sha256": "1fe239732636b4f9cbfd596542b77c5dd60af2d73a1d4df1eb30ba6ebcd9ec78",
+        "sha256_in_prefix": "1fe239732636b4f9cbfd596542b77c5dd60af2d73a1d4df1eb30ba6ebcd9ec78",
+        "size_in_bytes": 402
+      },
+      {
+        "_path": "include/krb5/ccselect_plugin.h",
+        "path_type": "hardlink",
+        "sha256": "6eb76ad87680dee03796b0fa1d5fb3586a29668aaa8f71be2d7e4ba8a909c4b9",
+        "sha256_in_prefix": "6eb76ad87680dee03796b0fa1d5fb3586a29668aaa8f71be2d7e4ba8a909c4b9",
+        "size_in_bytes": 4213
+      },
+      {
+        "_path": "include/krb5/certauth_plugin.h",
+        "path_type": "hardlink",
+        "sha256": "475cd45fee4aa33fdd1eb9bfe1a75cf50ba8b7cf391b331b55ea1239fc45ba36",
+        "sha256_in_prefix": "475cd45fee4aa33fdd1eb9bfe1a75cf50ba8b7cf391b331b55ea1239fc45ba36",
+        "size_in_bytes": 4964
+      },
+      {
+        "_path": "include/krb5/clpreauth_plugin.h",
+        "path_type": "hardlink",
+        "sha256": "fd56e4c841b21d622cef6b0174cbac09282112187b4e54a41bb9c8ce4b317c4c",
+        "sha256_in_prefix": "fd56e4c841b21d622cef6b0174cbac09282112187b4e54a41bb9c8ce4b317c4c",
+        "size_in_bytes": 14915
+      },
+      {
+        "_path": "include/krb5/hostrealm_plugin.h",
+        "path_type": "hardlink",
+        "sha256": "acd7ba4437c95d271e7c9cc19fd2097915b52576939c926a1f67837be0b99889",
+        "sha256_in_prefix": "acd7ba4437c95d271e7c9cc19fd2097915b52576939c926a1f67837be0b99889",
+        "size_in_bytes": 5460
+      },
+      {
+        "_path": "include/krb5/kadm5_auth_plugin.h",
+        "path_type": "hardlink",
+        "sha256": "fca25eafd23fd91a86b80d5e1cef1b5d736787034385c6c235bfc5225304792c",
+        "sha256_in_prefix": "fca25eafd23fd91a86b80d5e1cef1b5d736787034385c6c235bfc5225304792c",
+        "size_in_bytes": 12482
+      },
+      {
+        "_path": "include/krb5/kadm5_hook_plugin.h",
+        "path_type": "hardlink",
+        "sha256": "186d4520695bc55c894af072ae74472704d46b1359adf2e6103d52872b8a8019",
+        "sha256_in_prefix": "186d4520695bc55c894af072ae74472704d46b1359adf2e6103d52872b8a8019",
+        "size_in_bytes": 6161
+      },
+      {
+        "_path": "include/krb5/kdcpolicy_plugin.h",
+        "path_type": "hardlink",
+        "sha256": "829dd07baf0d80cb1269d8e712612773f26609ef572b8df6297997c7f4f2b1f4",
+        "sha256_in_prefix": "829dd07baf0d80cb1269d8e712612773f26609ef572b8df6297997c7f4f2b1f4",
+        "size_in_bytes": 5320
+      },
+      {
+        "_path": "include/krb5/kdcpreauth_plugin.h",
+        "path_type": "hardlink",
+        "sha256": "b81d0e257563eb9ccea89c82fb9d8a3f8ad2a066a6629903f3cfbae7a2e686a7",
+        "sha256_in_prefix": "b81d0e257563eb9ccea89c82fb9d8a3f8ad2a066a6629903f3cfbae7a2e686a7",
+        "size_in_bytes": 16752
+      },
+      {
+        "_path": "include/krb5/krb5.h",
+        "path_type": "hardlink",
+        "sha256": "dc3e703ab9112f4909b951343a174373360ca6d07a20b77e0d3156d0743230d5",
+        "sha256_in_prefix": "dc3e703ab9112f4909b951343a174373360ca6d07a20b77e0d3156d0743230d5",
+        "size_in_bytes": 342185
+      },
+      {
+        "_path": "include/krb5/localauth_plugin.h",
+        "path_type": "hardlink",
+        "sha256": "cdc4244abf61807bdfed95d1fe608cf925b4c4c3af4867ad6daced031c1cd8f3",
+        "sha256_in_prefix": "cdc4244abf61807bdfed95d1fe608cf925b4c4c3af4867ad6daced031c1cd8f3",
+        "size_in_bytes": 5881
+      },
+      {
+        "_path": "include/krb5/locate_plugin.h",
+        "path_type": "hardlink",
+        "sha256": "333768c87d8a9f9e48ac4e92406f9e70b107d472dc2bef1a983966a97f68a9cf",
+        "sha256_in_prefix": "333768c87d8a9f9e48ac4e92406f9e70b107d472dc2bef1a983966a97f68a9cf",
+        "size_in_bytes": 2624
+      },
+      {
+        "_path": "include/krb5/plugin.h",
+        "path_type": "hardlink",
+        "sha256": "5cdbdb19b61e841aa2fe593eb7a69ae1857728e04af15b3551a85c57d670c35d",
+        "sha256_in_prefix": "5cdbdb19b61e841aa2fe593eb7a69ae1857728e04af15b3551a85c57d670c35d",
+        "size_in_bytes": 2090
+      },
+      {
+        "_path": "include/krb5/preauth_plugin.h",
+        "path_type": "hardlink",
+        "sha256": "ab64bd09cd8ebf5588e4445e5de75b8e9c411ef6035b0f4f04c8185df8abfbdf",
+        "sha256_in_prefix": "ab64bd09cd8ebf5588e4445e5de75b8e9c411ef6035b0f4f04c8185df8abfbdf",
+        "size_in_bytes": 1774
+      },
+      {
+        "_path": "include/krb5/pwqual_plugin.h",
+        "path_type": "hardlink",
+        "sha256": "5f63d4365b584fd25dbfe565a6c37205ecdf34d6c565fe38b3e2834acae10b53",
+        "sha256_in_prefix": "5f63d4365b584fd25dbfe565a6c37205ecdf34d6c565fe38b3e2834acae10b53",
+        "size_in_bytes": 4426
+      },
+      {
+        "_path": "include/profile.h",
+        "path_type": "hardlink",
+        "sha256": "adcc379f74cf3f758172d3521d31756e99bfb4749a2de00d345cfecea52e64c8",
+        "sha256_in_prefix": "adcc379f74cf3f758172d3521d31756e99bfb4749a2de00d345cfecea52e64c8",
+        "size_in_bytes": 12178
+      },
+      {
+        "_path": "include/verto-module.h",
+        "path_type": "hardlink",
+        "sha256": "a0ca282f254efda89fae75a8d234d1b41a5f422422b5e37d2c56e863626557ca",
+        "sha256_in_prefix": "a0ca282f254efda89fae75a8d234d1b41a5f422422b5e37d2c56e863626557ca",
+        "size_in_bytes": 6640
+      },
+      {
+        "_path": "include/verto.h",
+        "path_type": "hardlink",
+        "sha256": "65975020670bc6a59e96d4c42b4e66e60282696a11469ba85a3ae7bb42a5bc2d",
+        "sha256_in_prefix": "65975020670bc6a59e96d4c42b4e66e60282696a11469ba85a3ae7bb42a5bc2d",
+        "size_in_bytes": 19437
+      },
+      {
+        "_path": "lib/krb5/plugins/kdb/db2.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "305510e41a67394d5e2eef6799b8c07bb447b165959a4eef40e4c882468b870a",
+        "sha256_in_prefix": "2d450b91601a6f1e2513f7107b6b9a45d8e5f7c1e237d9b7838dbe3b764d8cfa",
+        "size_in_bytes": 98372
+      },
+      {
+        "_path": "lib/krb5/plugins/preauth/otp.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "5d6ad89e58ef64fd0967344898ca7d33cf4fbdc721c243b7b7ab1f358caedc67",
+        "sha256_in_prefix": "005f95c0a1b0e2dff3bb189acbdc25ac24c60efe9925b41f8be26e8b8a231e68",
+        "size_in_bytes": 29504
+      },
+      {
+        "_path": "lib/krb5/plugins/preauth/pkinit.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "affeb1d40ae4784aa8787017d70e4ce454fb66b05e8e365c8465ffcc67b4773f",
+        "sha256_in_prefix": "cc2f63f7bbde01202bbeadc16c13c3175b3083febee2f376aa63b520f3d34d97",
+        "size_in_bytes": 125480
+      },
+      {
+        "_path": "lib/krb5/plugins/preauth/test.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "a83d2262d7430af3cb8bf1b9fc6b5288b625729ef387b59e19a07826943dc220",
+        "sha256_in_prefix": "3f39639b1583a8ef6822e6f818a4c84ad62651234d3deb8fa91702492d6214b6",
+        "size_in_bytes": 18068
+      },
+      {
+        "_path": "lib/krb5/plugins/tls/k5tls.so",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "441e268005ce01c78d82366d892836340ffd7466d60a6d41f3c69a5edd266754",
+        "sha256_in_prefix": "6f2e07d625384ac5a109a2ac00fd659124fa2f039ee89e44d994d48879d163ff",
+        "size_in_bytes": 21724
+      },
+      {
+        "_path": "lib/libcom_err.3.0.dylib",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "90d7c321501d388160bedb11795400e312b2ae780ae49d15bb500772f9642741",
+        "sha256_in_prefix": "943d7705c88c0d67dee46674984590a8cd5891405dca08cbf3dc78a832f4ad1f",
+        "size_in_bytes": 18724
+      },
+      {
+        "_path": "lib/libcom_err.3.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "90d7c321501d388160bedb11795400e312b2ae780ae49d15bb500772f9642741",
+        "size_in_bytes": 18724
+      },
+      {
+        "_path": "lib/libcom_err.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "90d7c321501d388160bedb11795400e312b2ae780ae49d15bb500772f9642741",
+        "size_in_bytes": 18724
+      },
+      {
+        "_path": "lib/libgssapi_krb5.2.2.dylib",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "b34b95937d3038c104e1d72e857458cfcc72126de3fecaa8c0b74c3a31181317",
+        "sha256_in_prefix": "1200a66e14db2f68c67de3ec85dfcdd1cd28d672fd8b7fb2af0bb24adf483d8f",
+        "size_in_bytes": 266836
+      },
+      {
+        "_path": "lib/libgssapi_krb5.2.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "b34b95937d3038c104e1d72e857458cfcc72126de3fecaa8c0b74c3a31181317",
+        "size_in_bytes": 266836
+      },
+      {
+        "_path": "lib/libgssapi_krb5.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "b34b95937d3038c104e1d72e857458cfcc72126de3fecaa8c0b74c3a31181317",
+        "size_in_bytes": 266836
+      },
+      {
+        "_path": "lib/libgssrpc.4.2.dylib",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "e9d1467925c75293117b85a0ee28214b7c83edcf8ee5b4fe67c3ec7b2d5fb33c",
+        "sha256_in_prefix": "9ca68d6d3eb6e85d05f1412cb84bde56e421c7ce957543ddaaad0b31ec90bc64",
+        "size_in_bytes": 106172
+      },
+      {
+        "_path": "lib/libgssrpc.4.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "e9d1467925c75293117b85a0ee28214b7c83edcf8ee5b4fe67c3ec7b2d5fb33c",
+        "size_in_bytes": 106172
+      },
+      {
+        "_path": "lib/libgssrpc.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "e9d1467925c75293117b85a0ee28214b7c83edcf8ee5b4fe67c3ec7b2d5fb33c",
+        "size_in_bytes": 106172
+      },
+      {
+        "_path": "lib/libk5crypto.3.1.dylib",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "793a21cabd9fb0cfacfa4aed3b6d2e468bf993dffa54bab65505e217289dee38",
+        "sha256_in_prefix": "649c73e09a15c3e9584122539698abe79014213a32e0b6a371fa1e75f7da40a8",
+        "size_in_bytes": 102392
+      },
+      {
+        "_path": "lib/libk5crypto.3.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "793a21cabd9fb0cfacfa4aed3b6d2e468bf993dffa54bab65505e217289dee38",
+        "size_in_bytes": 102392
+      },
+      {
+        "_path": "lib/libk5crypto.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "793a21cabd9fb0cfacfa4aed3b6d2e468bf993dffa54bab65505e217289dee38",
+        "size_in_bytes": 102392
+      },
+      {
+        "_path": "lib/libkadm5clnt.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "d1df4e8d77472cd709fd3fa9aac77a4c8ff8dcfd6850c51c2a2a9a4eb4042adc",
+        "size_in_bytes": 86964
+      },
+      {
+        "_path": "lib/libkadm5clnt_mit.11.0.dylib",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "d1df4e8d77472cd709fd3fa9aac77a4c8ff8dcfd6850c51c2a2a9a4eb4042adc",
+        "sha256_in_prefix": "e980d34ae2178a2b67639b921bbad6083077bd65e54fd2aaee8daea203e392ba",
+        "size_in_bytes": 86964
+      },
+      {
+        "_path": "lib/libkadm5clnt_mit.11.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "d1df4e8d77472cd709fd3fa9aac77a4c8ff8dcfd6850c51c2a2a9a4eb4042adc",
+        "size_in_bytes": 86964
+      },
+      {
+        "_path": "lib/libkadm5clnt_mit.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "d1df4e8d77472cd709fd3fa9aac77a4c8ff8dcfd6850c51c2a2a9a4eb4042adc",
+        "size_in_bytes": 86964
+      },
+      {
+        "_path": "lib/libkadm5srv.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "4d17562d035b6285c132bb75a53c50a505733bd170a1c421efcef882bfdd096a",
+        "size_in_bytes": 110860
+      },
+      {
+        "_path": "lib/libkadm5srv_mit.11.0.dylib",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "4d17562d035b6285c132bb75a53c50a505733bd170a1c421efcef882bfdd096a",
+        "sha256_in_prefix": "2197e2bba2aa6b85ca7df7e8c6dbe74aef8d9bf0c1c06b2408067e9bbc7257d9",
+        "size_in_bytes": 110860
+      },
+      {
+        "_path": "lib/libkadm5srv_mit.11.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "4d17562d035b6285c132bb75a53c50a505733bd170a1c421efcef882bfdd096a",
+        "size_in_bytes": 110860
+      },
+      {
+        "_path": "lib/libkadm5srv_mit.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "4d17562d035b6285c132bb75a53c50a505733bd170a1c421efcef882bfdd096a",
+        "size_in_bytes": 110860
+      },
+      {
+        "_path": "lib/libkdb5.9.0.dylib",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "bfaf7ece896d62a33177df45afb1c8383d0d2106b28cf7044ab6202848cb908e",
+        "sha256_in_prefix": "87b9253b3be66dc80873d3468573c885ee1a82575d17ca1fc5165cc16c03efff",
+        "size_in_bytes": 76020
+      },
+      {
+        "_path": "lib/libkdb5.9.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "bfaf7ece896d62a33177df45afb1c8383d0d2106b28cf7044ab6202848cb908e",
+        "size_in_bytes": 76020
+      },
+      {
+        "_path": "lib/libkdb5.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "bfaf7ece896d62a33177df45afb1c8383d0d2106b28cf7044ab6202848cb908e",
+        "size_in_bytes": 76020
+      },
+      {
+        "_path": "lib/libkrad.0.0.dylib",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "2a46e2943036f7b7a825470b8d3beab9adbf3ef4b6ee38bfd706d254af1fc41b",
+        "sha256_in_prefix": "4ff3d16160ce4de8c681a254da95d49b56c1ea1d058a27ebbefdcdbcc2d5bbca",
+        "size_in_bytes": 41100
+      },
+      {
+        "_path": "lib/libkrad.0.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "2a46e2943036f7b7a825470b8d3beab9adbf3ef4b6ee38bfd706d254af1fc41b",
+        "size_in_bytes": 41100
+      },
+      {
+        "_path": "lib/libkrad.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "2a46e2943036f7b7a825470b8d3beab9adbf3ef4b6ee38bfd706d254af1fc41b",
+        "size_in_bytes": 41100
+      },
+      {
+        "_path": "lib/libkrb5.3.3.dylib",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "183edf89cfd86df702c97e3921a769000149f61641965c2fc64b65c6a571a044",
+        "sha256_in_prefix": "849fe9bd79360930f3df42c54bdb5a0ef7c873f9ae24411f91cd18d8e6121e68",
+        "size_in_bytes": 810520
+      },
+      {
+        "_path": "lib/libkrb5.3.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "183edf89cfd86df702c97e3921a769000149f61641965c2fc64b65c6a571a044",
+        "size_in_bytes": 810520
+      },
+      {
+        "_path": "lib/libkrb5.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "183edf89cfd86df702c97e3921a769000149f61641965c2fc64b65c6a571a044",
+        "size_in_bytes": 810520
+      },
+      {
+        "_path": "lib/libkrb5support.1.1.dylib",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "5aadaafc0e6cffdef0b3113948c9a69fd41d6370154e4c7f74700fd1ad032b03",
+        "sha256_in_prefix": "80b09193863e23b61eb5bd56d5bb1de5a22157a7f41ef7983a09a565dee46274",
+        "size_in_bytes": 41632
+      },
+      {
+        "_path": "lib/libkrb5support.1.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "5aadaafc0e6cffdef0b3113948c9a69fd41d6370154e4c7f74700fd1ad032b03",
+        "size_in_bytes": 41632
+      },
+      {
+        "_path": "lib/libkrb5support.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "5aadaafc0e6cffdef0b3113948c9a69fd41d6370154e4c7f74700fd1ad032b03",
+        "size_in_bytes": 41632
+      },
+      {
+        "_path": "lib/libverto.0.0.dylib",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "caba0d639a5f28a84ea12d0c4cebba0e83dc199efde2a98838292004a4080b67",
+        "sha256_in_prefix": "6881e5aba9695ddae1f8224ec758bb3817850ed6ecd7b002feb0f4140bf50e69",
+        "size_in_bytes": 33796
+      },
+      {
+        "_path": "lib/libverto.0.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "caba0d639a5f28a84ea12d0c4cebba0e83dc199efde2a98838292004a4080b67",
+        "size_in_bytes": 33796
+      },
+      {
+        "_path": "lib/libverto.dylib",
+        "file_mode": "binary",
+        "path_type": "softlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "caba0d639a5f28a84ea12d0c4cebba0e83dc199efde2a98838292004a4080b67",
+        "size_in_bytes": 33796
+      },
+      {
+        "_path": "lib/pkgconfig/gssrpc.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "de7de2db15440ce5f243ce8ebe035e7a16ccc1a6dc4acd24754850bf7071616c",
+        "sha256_in_prefix": "c786047e5940fcb21484de09a00c1a21c1d2ded847d8a56c7cce766163419697",
+        "size_in_bytes": 282
+      },
+      {
+        "_path": "lib/pkgconfig/kadm-client.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "ba96114db633795f96c5721a49d4f88f08a22aa2762fc9fe122a2c62623d5e80",
+        "sha256_in_prefix": "d82e9c8cb6dd9538af8f90881df38f9f818b69eaba9fb1b43a3dc1569bcb0c72",
+        "size_in_bytes": 303
+      },
+      {
+        "_path": "lib/pkgconfig/kadm-server.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "68874910342eda8e2fe7d57a46d5932fc08dcea2d1f0109960b98f00d8fa32ac",
+        "sha256_in_prefix": "4edf037a025d3e8496fec5b13fea410ee7b2f21bd9d01f11627eb917318043f2",
+        "size_in_bytes": 299
+      },
+      {
+        "_path": "lib/pkgconfig/kdb.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "ef340be354396336d345979c9ccb90456f32a69de38ad6b4130bc4ee4cc1195a",
+        "sha256_in_prefix": "b1985dc12da40c015529a2e18d91c2743e64f793f6c33434fd8d47025d4f4b5b",
+        "size_in_bytes": 334
+      },
+      {
+        "_path": "lib/pkgconfig/krb5-gssapi.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "61970113270f35a7b3428c11ee09666fd28c40209c8fb416d57ea31efafb2230",
+        "sha256_in_prefix": "06779ae1abf8310d9d2227a2f359165918b83f90c5df130ab76e19f30b0a0631",
+        "size_in_bytes": 240
+      },
+      {
+        "_path": "lib/pkgconfig/krb5.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "d3787d9f73b57a307df35f8e9bd02c59ad73c40cacea419981a73ff7221f8eab",
+        "sha256_in_prefix": "024ffb7786927fc5a8d74d4c4c02f33b6efc9147ed1ff6f607cf8e37f3a03227",
+        "size_in_bytes": 374
+      },
+      {
+        "_path": "lib/pkgconfig/mit-krb5-gssapi.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "2e745e971cd2fe3e814b11c770d279500293c857cb7baf1c7081fb27721cd31e",
+        "sha256_in_prefix": "fdb918f830fccffb35856d895f50a4a251a92eac05eb6897861785b8a479b9e6",
+        "size_in_bytes": 290
+      },
+      {
+        "_path": "lib/pkgconfig/mit-krb5.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "8907afdb770b41944b060492d8c3267ecd251ac221158730a57e38d8f5518aa7",
+        "sha256_in_prefix": "58720dd41fcab4dd17136b5192b48ab9694d1a0958f17cb714e208aa212c87cc",
+        "size_in_bytes": 446
+      },
+      {
+        "_path": "sbin/gss-server",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "efa236b2b1803ed71f8bee699ba8c82f3626e3c44bd8309cafa6b68729e9b284",
+        "sha256_in_prefix": "2fec0a6ad4c56aa3efb7eced39476c31cb8bed7d3cb849c20be85a457766a53c",
+        "size_in_bytes": 24480
+      },
+      {
+        "_path": "sbin/kadmin.local",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "2bfa87b365b7d528a7e2419292fd3d0d697f73e39652ce79ac6a5d83d70506d8",
+        "sha256_in_prefix": "169d776dd9b4e7e121f3511110bfd15f6a2090aed5a9735a636e85d7feb5ed17",
+        "size_in_bytes": 88300
+      },
+      {
+        "_path": "sbin/kadmind",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "ad1664b104ebee7cd7b619552dbf2a1c1ab1150efd8a28a5f099091f8ee91bd1",
+        "sha256_in_prefix": "1761e3f72a5fe2ec31e81f562ffb711c1b9a8e2f06e624910de8188bb96d5fc0",
+        "size_in_bytes": 136788
+      },
+      {
+        "_path": "sbin/kdb5_util",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "678590a0a02549475d1db502b4899b1da97dac652a1da3feae8c9e47d3386dae",
+        "sha256_in_prefix": "50683ececcb2290bb1285b6fc3632d471273fefea052a15dfc001da12705ab00",
+        "size_in_bytes": 99628
+      },
+      {
+        "_path": "sbin/kprop",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "215ba922cdce065397cb9993a79dba0f37d579883911bdeaf34b565b7a892273",
+        "sha256_in_prefix": "39968549c4b80ad11686b62a9a8092c3801c3f88ff5bc2951f8376e79cd055f2",
+        "size_in_bytes": 25144
+      },
+      {
+        "_path": "sbin/kpropd",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "76db25d0b738f3fe50319b74292281fcd7da1057c6e5b15bb0e32fa2c38de68a",
+        "sha256_in_prefix": "766aef30bca50088f27f398b5626c8e250bd949f29eeccc019e76022819f04b8",
+        "size_in_bytes": 45636
+      },
+      {
+        "_path": "sbin/kproplog",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "ecdef865939723e569e51c81ca1c582a626a8928755d3eea1f33a7621a435a62",
+        "sha256_in_prefix": "0bd8fe508a3fa2a666fbc5c486d376792879441acc9283b7bdfb23dd0d22fd50",
+        "size_in_bytes": 22624
+      },
+      {
+        "_path": "sbin/krb5-send-pr",
+        "path_type": "hardlink",
+        "sha256": "b2f471f0c9c664989814fee1a3e928814a26fad235c985257228b32512f8a148",
+        "sha256_in_prefix": "b2f471f0c9c664989814fee1a3e928814a26fad235c985257228b32512f8a148",
+        "size_in_bytes": 347
+      },
+      {
+        "_path": "sbin/krb5kdc",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "467cb77f84aa8e397c29a00974c99760513216721df00e71d008264309d16d05",
+        "sha256_in_prefix": "aada1d74361067418a85953610967f69c8237f507061198cde0d41d64cbfefef",
+        "size_in_bytes": 148488
+      },
+      {
+        "_path": "sbin/sim_server",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "0ff06f64708d847bf01cb6431e7a18a851047bc9781d5996590c7dd914bd8eda",
+        "sha256_in_prefix": "1b4641b29420989ed5f12a6b150fa8920920f78bb576b9da490d1b50218f5e64",
+        "size_in_bytes": 14184
+      },
+      {
+        "_path": "sbin/sserver",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "0f48b94981e3a71587623d3ece8564697d88d0e6fcc93da9d3bb05daabeaa0ca",
+        "sha256_in_prefix": "1047ba4818e51b73ecb74f398c850df550881d992e5df6bbbbb801e97cbd502c",
+        "size_in_bytes": 14360
+      },
+      {
+        "_path": "sbin/uuserver",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/Users/travis/miniconda3/conda-bld/krb5_1551188992798/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "86f6bcc61a34626813b1ef98ab3bf9a8b06f1bf0612105ab672ac2ac0f600417",
+        "sha256_in_prefix": "8dc2ef5dbd9925ec3f7b4baa8518b23c09901d8b8d354dab46c733ecc24da518",
+        "size_in_bytes": 14744
+      },
+      {
+        "_path": "share/et/et_c.awk",
+        "path_type": "hardlink",
+        "sha256": "2187fea4d5d68f2341e44040e3bafb83a52aa3b7697fd1ec13ddcc57b565d274",
+        "sha256_in_prefix": "2187fea4d5d68f2341e44040e3bafb83a52aa3b7697fd1ec13ddcc57b565d274",
+        "size_in_bytes": 5212
+      },
+      {
+        "_path": "share/et/et_h.awk",
+        "path_type": "hardlink",
+        "sha256": "2a3b200cf0f767df8a1c595cbdb3a9151dfd682bf27443590074c984ca38944e",
+        "sha256_in_prefix": "2a3b200cf0f767df8a1c595cbdb3a9151dfd682bf27443590074c984ca38944e",
+        "size_in_bytes": 3918
+      },
+      {
+        "_path": "share/examples/krb5/kdc.conf",
+        "path_type": "hardlink",
+        "sha256": "db1f1149b17b5d2ffd892d74e602be07224f300da1041a2724770d5d8dfc008f",
+        "sha256_in_prefix": "db1f1149b17b5d2ffd892d74e602be07224f300da1041a2724770d5d8dfc008f",
+        "size_in_bytes": 341
+      },
+      {
+        "_path": "share/examples/krb5/krb5.conf",
+        "path_type": "hardlink",
+        "sha256": "ac5ea37381e4ce97d946f13fbebfa635c38975c0fbd780864775b86fb1e66ffe",
+        "sha256_in_prefix": "ac5ea37381e4ce97d946f13fbebfa635c38975c0fbd780864775b86fb1e66ffe",
+        "size_in_bytes": 369
+      },
+      {
+        "_path": "share/examples/krb5/services.append",
+        "path_type": "hardlink",
+        "sha256": "70e9d1f776968b73d240de556f3f43d4b62652aa5ec5bd43ddf7daa760d76a82",
+        "sha256_in_prefix": "70e9d1f776968b73d240de556f3f43d4b62652aa5ec5bd43ddf7daa760d76a82",
+        "size_in_bytes": 596
+      },
+      {
+        "_path": "share/man/man1/compile_et.1",
+        "path_type": "hardlink",
+        "sha256": "f31c861f180c6397b7796c8c86016ced1b6cef519f76ee26bc3bf5a23665fde7",
+        "sha256_in_prefix": "f31c861f180c6397b7796c8c86016ced1b6cef519f76ee26bc3bf5a23665fde7",
+        "size_in_bytes": 2549
+      },
+      {
+        "_path": "share/man/man1/k5srvutil.1",
+        "path_type": "hardlink",
+        "sha256": "055324d9126c7a9e99671e51a3b6d59f25b92b86beaabc3cfddacd5b3aefa5df",
+        "sha256_in_prefix": "055324d9126c7a9e99671e51a3b6d59f25b92b86beaabc3cfddacd5b3aefa5df",
+        "size_in_bytes": 2868
+      },
+      {
+        "_path": "share/man/man1/kadmin.1",
+        "path_type": "hardlink",
+        "sha256": "f6e57b728377aa111363f6b012aadcabe3b34bbf71b10dda75d770a1990f00d6",
+        "sha256_in_prefix": "f6e57b728377aa111363f6b012aadcabe3b34bbf71b10dda75d770a1990f00d6",
+        "size_in_bytes": 32191
+      },
+      {
+        "_path": "share/man/man1/kdestroy.1",
+        "path_type": "hardlink",
+        "sha256": "1bbb7bc2ad34285e215ec03599f264f2b38aa9fe7d49ccef331d5f4b96a87e32",
+        "sha256_in_prefix": "1bbb7bc2ad34285e215ec03599f264f2b38aa9fe7d49ccef331d5f4b96a87e32",
+        "size_in_bytes": 2221
+      },
+      {
+        "_path": "share/man/man1/kinit.1",
+        "path_type": "hardlink",
+        "sha256": "d2b6632c66a1cddb113f4351d27668a07bd1b18c73a52032b49221829d7dbc75",
+        "sha256_in_prefix": "d2b6632c66a1cddb113f4351d27668a07bd1b18c73a52032b49221829d7dbc75",
+        "size_in_bytes": 7988
+      },
+      {
+        "_path": "share/man/man1/klist.1",
+        "path_type": "hardlink",
+        "sha256": "cfc86dcc42e19d1d5f0371a36739144f2d5660de5efa7e059f7fd2b67b88bcb6",
+        "sha256_in_prefix": "cfc86dcc42e19d1d5f0371a36739144f2d5660de5efa7e059f7fd2b67b88bcb6",
+        "size_in_bytes": 3684
+      },
+      {
+        "_path": "share/man/man1/kpasswd.1",
+        "path_type": "hardlink",
+        "sha256": "f7d2bfd86d0a74be208ed0b9eb5da630c1f30e39a112514d86b780f5203e71ae",
+        "sha256_in_prefix": "f7d2bfd86d0a74be208ed0b9eb5da630c1f30e39a112514d86b780f5203e71ae",
+        "size_in_bytes": 1866
+      },
+      {
+        "_path": "share/man/man1/krb5-config.1",
+        "path_type": "hardlink",
+        "sha256": "8bc5f418d6e17182570e1400212775c5b507b3fe413173d31915eaea82f06034",
+        "sha256_in_prefix": "8bc5f418d6e17182570e1400212775c5b507b3fe413173d31915eaea82f06034",
+        "size_in_bytes": 3337
+      },
+      {
+        "_path": "share/man/man1/ksu.1",
+        "path_type": "hardlink",
+        "sha256": "014d73aebfb029f4a30dee29b6407b208324112809a6039541350217f5df91aa",
+        "sha256_in_prefix": "014d73aebfb029f4a30dee29b6407b208324112809a6039541350217f5df91aa",
+        "size_in_bytes": 16860
+      },
+      {
+        "_path": "share/man/man1/kswitch.1",
+        "path_type": "hardlink",
+        "sha256": "a855cd0420538bf61c09167cb4b1e0fc990810b555ad04061489575ac9ecded4",
+        "sha256_in_prefix": "a855cd0420538bf61c09167cb4b1e0fc990810b555ad04061489575ac9ecded4",
+        "size_in_bytes": 1641
+      },
+      {
+        "_path": "share/man/man1/ktutil.1",
+        "path_type": "hardlink",
+        "sha256": "62d2ca56c2176a2112d119e94a62a02f8d406daa9141c91ef6e50dc492780ebe",
+        "sha256_in_prefix": "62d2ca56c2176a2112d119e94a62a02f8d406daa9141c91ef6e50dc492780ebe",
+        "size_in_bytes": 3347
+      },
+      {
+        "_path": "share/man/man1/kvno.1",
+        "path_type": "hardlink",
+        "sha256": "800016778b781095bd4ac3fcaa0576a2f20a04a086dc957467cfee1a588f7c4e",
+        "sha256_in_prefix": "800016778b781095bd4ac3fcaa0576a2f20a04a086dc957467cfee1a588f7c4e",
+        "size_in_bytes": 2829
+      },
+      {
+        "_path": "share/man/man1/sclient.1",
+        "path_type": "hardlink",
+        "sha256": "d8ac2dbe4703cdb43994f4e801f8a66517e8b2ccaa3d7f83e957bf2c8207f7ed",
+        "sha256_in_prefix": "d8ac2dbe4703cdb43994f4e801f8a66517e8b2ccaa3d7f83e957bf2c8207f7ed",
+        "size_in_bytes": 1284
+      },
+      {
+        "_path": "share/man/man5/.k5identity.5",
+        "path_type": "hardlink",
+        "sha256": "a27b58476a353f8701f12c453eb5621e17df622d26fc77bd343ef5b60bb66a4d",
+        "sha256_in_prefix": "a27b58476a353f8701f12c453eb5621e17df622d26fc77bd343ef5b60bb66a4d",
+        "size_in_bytes": 22
+      },
+      {
+        "_path": "share/man/man5/.k5login.5",
+        "path_type": "hardlink",
+        "sha256": "251f58277a1ccfb7190717eb6890c4f94e6e65467b306ac422c3bbdc21160259",
+        "sha256_in_prefix": "251f58277a1ccfb7190717eb6890c4f94e6e65467b306ac422c3bbdc21160259",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "share/man/man5/k5identity.5",
+        "path_type": "hardlink",
+        "sha256": "adf094b9af8d59493f7571890d0a956ca249e43c4b5ad7022c303796fdcab00c",
+        "sha256_in_prefix": "adf094b9af8d59493f7571890d0a956ca249e43c4b5ad7022c303796fdcab00c",
+        "size_in_bytes": 3064
+      },
+      {
+        "_path": "share/man/man5/k5login.5",
+        "path_type": "hardlink",
+        "sha256": "3795f85a693817d61ada6d5065375f67eda9ec4efe538e38769f3a2a80de26ce",
+        "sha256_in_prefix": "3795f85a693817d61ada6d5065375f67eda9ec4efe538e38769f3a2a80de26ce",
+        "size_in_bytes": 2833
+      },
+      {
+        "_path": "share/man/man5/kadm5.acl.5",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "d02aaaa9c1aec7cf290916af28add46deb3d6d268588f9847ced0c86cb0f6100",
+        "sha256_in_prefix": "3be286db13fc9810bcad5fc1c46ad089e1b3d06022d1bb4d247fc94fe0b20e2c",
+        "size_in_bytes": 7473
+      },
+      {
+        "_path": "share/man/man5/kdc.conf.5",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "897758ff5b0ee21ce009e76262526c3f476cfbf64209e20ed814fcee07f25797",
+        "sha256_in_prefix": "0e91ffe57483e7b0e52166a47f7c2913877cb1da82c70caae78209e851f9bb22",
+        "size_in_bytes": 38899
+      },
+      {
+        "_path": "share/man/man5/krb5.conf.5",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "219a12c119d1209b027762958082f443b18caad9b588fea01d698081de0904b6",
+        "sha256_in_prefix": "a811c14f12489094c3eb2f50ff3fc89674ab440d1c3768e7db79e4be7d887924",
+        "size_in_bytes": 48762
+      },
+      {
+        "_path": "share/man/man7/kerberos.7",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "60c26f3b85cfcedb8e3f1e21fe0a9b309a358f13fd32088513eee2d16b3c5c2f",
+        "sha256_in_prefix": "a9ec91ecb7b73c92309d7dcb10989aafa38681e4067668654aeca1bb4740f64c",
+        "size_in_bytes": 7432
+      },
+      {
+        "_path": "share/man/man8/kadmin.local.8",
+        "path_type": "hardlink",
+        "sha256": "5ca50e711339491b407438689b8781e86c0e43a885ace7a93dca694246cc20be",
+        "sha256_in_prefix": "5ca50e711339491b407438689b8781e86c0e43a885ace7a93dca694246cc20be",
+        "size_in_bytes": 18
+      },
+      {
+        "_path": "share/man/man8/kadmind.8",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "683d46bc6809c500471e5f491c8d45e492434c7bb129b0fccc685946bca8bd3f",
+        "sha256_in_prefix": "38b4f1da886f07e80d4e7f9e8b11c6c72fe42a165105d9c5d380b60666960459",
+        "size_in_bytes": 5264
+      },
+      {
+        "_path": "share/man/man8/kdb5_ldap_util.8",
+        "path_type": "hardlink",
+        "sha256": "ae76712973a08c6d2abe588998192f47cb405aaa2a02e69bea3c5cc2cc0b5fb1",
+        "sha256_in_prefix": "ae76712973a08c6d2abe588998192f47cb405aaa2a02e69bea3c5cc2cc0b5fb1",
+        "size_in_bytes": 13179
+      },
+      {
+        "_path": "share/man/man8/kdb5_util.8",
+        "path_type": "hardlink",
+        "sha256": "b19dbd58372b9f376f5bad5ce5d3ac05d73eb676499393575721955ae0b13f37",
+        "sha256_in_prefix": "b19dbd58372b9f376f5bad5ce5d3ac05d73eb676499393575721955ae0b13f37",
+        "size_in_bytes": 16426
+      },
+      {
+        "_path": "share/man/man8/kprop.8",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "6f95367d3651b387ea91bbb0beb99ac4c71ce800e302b90b4d8f90b4eaa98c52",
+        "sha256_in_prefix": "c1f6bc8b2ef930b5c39a8adf33d50410703e2b9e283bf0c56910957c27946a57",
+        "size_in_bytes": 1993
+      },
+      {
+        "_path": "share/man/man8/kpropd.8",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+        "sha256": "62ee2e76b7101859be5ed16e0582ab5966605b994e4dfbe7b63307f296eb0eec",
+        "sha256_in_prefix": "f73203f9a0c47db14497c91db1d090a2d76e67830af403210664d5bdddd746ac",
+        "size_in_bytes": 5632
+      },
+      {
+        "_path": "share/man/man8/kproplog.8",
+        "path_type": "hardlink",
+        "sha256": "6db23688fbb3ad29d0a6d689872e1af63830754b6a85789f00e1f72228105d0d",
+        "sha256_in_prefix": "6db23688fbb3ad29d0a6d689872e1af63830754b6a85789f00e1f72228105d0d",
+        "size_in_bytes": 3357
+      },
+      {
+        "_path": "share/man/man8/krb5kdc.8",
+        "path_type": "hardlink",
+        "sha256": "77c0e9b5a08b47ca90d9a2dead0c63f85a4700681269ff48e4958a21fbf840d8",
+        "sha256_in_prefix": "77c0e9b5a08b47ca90d9a2dead0c63f85a4700681269ff48e4958a21fbf840d8",
+        "size_in_bytes": 4623
+      },
+      {
+        "_path": "share/man/man8/sserver.8",
+        "path_type": "hardlink",
+        "sha256": "c7196dc134c90ba1ede27601ddf357d54b6720808bc70eff696eae274ee268ed",
+        "sha256_in_prefix": "c7196dc134c90ba1ede27601ddf357d54b6720808bc70eff696eae274ee268ed",
+        "size_in_bytes": 4536
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "f49452ee7e8a967cdbaf22a92537067c54d37b9ddf8f9e1e6c1d3ebd7e2f0e3d",
+  "size": 1174834,
+  "subdir": "osx-64",
+  "timestamp": 1551189387258,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/krb5-1.16.3-hcfa6398_1001.tar.bz2",
+  "version": "1.16.3"
+}

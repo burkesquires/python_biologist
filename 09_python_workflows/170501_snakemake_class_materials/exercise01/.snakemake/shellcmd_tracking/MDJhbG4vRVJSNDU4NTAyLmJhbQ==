@@ -1,5 +1,0 @@
-
-        module load hisat/2.0.5 samtools/1.4
-        hisat2 -x 00ref/hisat_index/R64-1-1 -U 00fastq/ERR458502.fastq.gz --threads 4           | samtools sort -T tmp/ERR458502 -O BAM           > 02aln/ERR458502.bam 
-        samtools index 02aln/ERR458502.bam
-        

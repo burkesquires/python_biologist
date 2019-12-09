@@ -1,0 +1,48 @@
+{
+  "build": "hecc5488_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/Users/squiresrb/anaconda3/pkgs/ca-certificates-2019.11.28-hecc5488_0",
+  "features": "",
+  "files": [
+    "ssl/cacert.pem",
+    "ssl/cert.pem"
+  ],
+  "fn": "ca-certificates-2019.11.28-hecc5488_0.tar.bz2",
+  "license": "ISC",
+  "link": {
+    "source": "/Users/squiresrb/anaconda3/pkgs/ca-certificates-2019.11.28-hecc5488_0",
+    "type": 1
+  },
+  "md5": "dd8f660dbb2b533bd8cb29cf06b1dbc5",
+  "name": "ca-certificates",
+  "package_tarball_full_path": "/Users/squiresrb/anaconda3/pkgs/ca-certificates-2019.11.28-hecc5488_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "ssl/cacert.pem",
+        "path_type": "hardlink",
+        "sha256": "732befe49c758070023448f619a3abb088f44e4f05992bc7478dae873be56ad8",
+        "sha256_in_prefix": "732befe49c758070023448f619a3abb088f44e4f05992bc7478dae873be56ad8",
+        "size_in_bytes": 281457
+      },
+      {
+        "_path": "ssl/cert.pem",
+        "path_type": "softlink",
+        "sha256": "732befe49c758070023448f619a3abb088f44e4f05992bc7478dae873be56ad8",
+        "size_in_bytes": 281457
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "2749b990b0d7683f19956bb2fd784f7f2584c2a4157f69438ca44a36ee6e3832",
+  "size": 148289,
+  "subdir": "osx-64",
+  "timestamp": 1574957652988,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/osx-64/ca-certificates-2019.11.28-hecc5488_0.tar.bz2",
+  "version": "2019.11.28"
+}

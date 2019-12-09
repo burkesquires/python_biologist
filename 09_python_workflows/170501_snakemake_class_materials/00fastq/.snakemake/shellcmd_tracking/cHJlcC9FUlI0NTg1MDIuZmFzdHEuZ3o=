@@ -1,7 +1,0 @@
-
-        url="ftp://ftp.sra.ebi.ac.uk/vol1/fastq"
-        for o in prep/ERR458495.fastq.gz prep/ERR458502.fastq.gz prep/ERR458509.fastq.gz prep/ERR458516.fastq.gz prep/ERR458880.fastq.gz prep/ERR458887.fastq.gz; do
-            sample=$(basename $o .fastq.gz)
-            wget -O $o "$url/ERR458/$sample/$sample.fastq.gz"
-        done
-        

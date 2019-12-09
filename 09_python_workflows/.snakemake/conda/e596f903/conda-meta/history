@@ -1,0 +1,22 @@
+==> 2019-12-09 10:47:47 <==
+# cmd: /Users/squiresrb/anaconda3/bin/conda-env create --file /Users/squiresrb/Documents/GitHub/python_biologist/09_python_workflows/.snakemake/conda/e596f903.yaml --prefix /Users/squiresrb/Documents/GitHub/python_biologist/09_python_workflows/.snakemake/conda/e596f903
+# conda version: 4.7.12
++bioconda::bwa-0.7.17-h2573ce8_6
++bioconda::htslib-1.9-h3a161e8_7
++bioconda::libdeflate-1.0-h1de35cc_1
++bioconda::samtools-1.9-h8aa4d43_12
++conda-forge::bzip2-1.0.8-h0b31af3_2
++conda-forge::ca-certificates-2019.11.28-hecc5488_0
++conda-forge::curl-7.65.3-h22ea746_0
++conda-forge::krb5-1.16.3-hcfa6398_1001
++conda-forge::libcurl-7.65.3-h16faf7d_0
++conda-forge::libcxx-9.0.0-h89e68fa_1
++conda-forge::libedit-3.1.20170329-hcfe32e1_1001
++conda-forge::libssh2-1.8.2-hcdc9a53_2
++conda-forge::ncurses-6.1-h0a44026_1002
++conda-forge::openssl-1.1.1d-h0b31af3_0
++conda-forge::perl-5.26.2-haec8ef5_1006
++conda-forge::tk-8.6.10-hbbe82c9_0
++conda-forge::xz-5.2.4-h1de35cc_1001
++conda-forge::zlib-1.2.11-h0b31af3_1006
+# update specs: ['samtools=1.9', 'bwa=0.7.17']

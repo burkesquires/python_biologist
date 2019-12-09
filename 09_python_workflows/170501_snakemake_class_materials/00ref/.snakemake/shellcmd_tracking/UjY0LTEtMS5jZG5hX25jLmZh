@@ -1,8 +1,0 @@
-
-        wget ftp://ftp.ensembl.org/pub/release-88/fasta/saccharomyces_cerevisiae/cdna/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa.gz
-        wget ftp://ftp.ensembl.org/pub/release-88/fasta/saccharomyces_cerevisiae/ncrna/Saccharomyces_cerevisiae.R64-1-1.ncrna.fa.gz
-        gunzip Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa.gz
-        gunzip Saccharomyces_cerevisiae.R64-1-1.ncrna.fa.gz
-        cat Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa             Saccharomyces_cerevisiae.R64-1-1.ncrna.fa               | awk '/^>/ {NF=1} {print}' > R64-1-1.cdna_nc.fa
-        rm Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa            Saccharomyces_cerevisiae.R64-1-1.ncrna.fa
-        

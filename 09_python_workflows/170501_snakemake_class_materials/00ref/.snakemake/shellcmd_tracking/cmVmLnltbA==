@@ -1,7 +1,0 @@
-
-        echo "reference:" > ref.yml
-        echo "  ensembl_ver: 88" >> ref.yml
-        echo "  genome_build: R64-1-1 toplevel" >> ref.yml
-        echo "  genome_file: R64-1-1.fa" >> ref.yml
-        echo "  cdna_file: R64-1-1.cdna.fa" >> ref.yml
-        

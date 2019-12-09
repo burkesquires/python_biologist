@@ -1,5 +1,0 @@
-
-        wget "ftp://ftp.ensembl.org/pub/release-88/gff3/saccharomyces_cerevisiae/Saccharomyces_cerevisiae.R64-1-1.88.gff3.gz"
-        gunzip Saccharomyces_cerevisiae.R64-1-1.88.gff3.gz
-        mv Saccharomyces_cerevisiae.R64-1-1.88.gff3 R64-1-1.genes.gff3
-        

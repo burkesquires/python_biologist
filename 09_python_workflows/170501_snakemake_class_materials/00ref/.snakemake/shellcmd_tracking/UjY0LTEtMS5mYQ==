@@ -1,5 +1,0 @@
-
-        wget ftp://ftp.ensembl.org/pub/release-88/fasta/saccharomyces_cerevisiae/dna/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz
-        gunzip Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz
-        mv Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa R64-1-1.fa
-        
