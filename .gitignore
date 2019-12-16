@@ -105,3 +105,4 @@ ENV/
 
 # snakemake
 *.snakemake/
+*.snakemake
