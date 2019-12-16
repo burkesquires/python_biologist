@@ -106,3 +106,4 @@ ENV/
 # snakemake
 *.snakemake/
 *.snakemake
+09_python_workflows/.snakemake/
