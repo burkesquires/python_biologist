@@ -102,3 +102,6 @@ ENV/
 
 # mac
 .DS_Store
+
+# snakemake
+.snakemake/
