@@ -104,4 +104,6 @@ ENV/
 .DS_Store
 
 # snakemake
-.snakemake
+09_python_workflows/.snakemake/*
+09_python_workflows/.snakemake/**
+**/.snakemake/
