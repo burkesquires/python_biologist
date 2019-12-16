@@ -104,4 +104,4 @@ ENV/
 .DS_Store
 
 # snakemake
-**.snakemake/
+**.snakemake/**
