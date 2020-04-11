@@ -11,12 +11,12 @@ Or download from: https://github.com/bokeh/bokeh-notebooks/archive/master.zip
 
 This tutorial has been tested on:
 
-* bokeh 0.12.7
-* pandas 0.20.3
-* notebook 5.0.0
+* bokeh 1.4.0
+* pandas 0.25.2
+* notebook 6.0.1
 * phantomjs 2.1.1
-* pillow 4.2.1
-* selenium 3.5.0
+* pillow 6.1.0
+* selenium 3.8.0
 
 Other combinations may work also.
 
@@ -51,11 +51,18 @@ conda install phantomjs pillow selenium
 
 ## Get the sample data
 
-Bokeh has a sample data download that gives us some data to build demo visualizations. To get
+Bokeh has a [sample data](https://docs.bokeh.org/en/latest/docs/installation.html#sample-data) download that gives us some data to build demo visualizations. To get
 it run the following command at your command line:
 
 ```bash
 $ bokeh sampledata
+```
+
+or run the following from within a Python interpreter:
+
+```python
+import bokeh.sampledata
+bokeh.sampledata.download()
 ```
 
 ### Install Datashader and Holoviews (optional)
@@ -64,7 +71,7 @@ Some optional sections require the additional packages Flask, Datashader, and Ho
 These  can be installed with:
 
 ```bash
-$ conda install -c datashader holoviews flask
+$ conda install -c pyviz datashader holoviews flask
 ```
 
 ## Run the Jupyter notebook

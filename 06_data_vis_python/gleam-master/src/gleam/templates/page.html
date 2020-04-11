@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="/gleam/css/styles.css" />
+{% endblock %}
+
+{% block js %}
+    <script>
+    
+    // keeps track of inputs have changed since last time tab was changed
+    
+    
+    $(document).ready(function() {
+        var extraTab = $("ul.nav-tabs li.active a")[0];
+        console.log($(extraTab).attr('id'));
+        $("[name='extra']").val($(extraTab).attr('id'));
+        console.log($("[name='extra']").val());
+        refresh();
+
+        $("#input_form").change(function() {
+            refresh();
+        });
+    });
+    
+    function refresh() {
+        $(".output").fadeTo(100, .5);
+        $('#input_form').ajaxSubmit({url: "{{server_path}}", 
+                                        type: 'post',
+                                        dataType: 'json',
+                                        success: showResponse});
+    }
+
+    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+        $("[name='extra']").val($(this).attr('id'));
+        refresh();
+    })
+    
+    function showResponse(responseJson) {
+        for (var id in responseJson['changes']) {
+            for (var attr in responseJson['changes'][id]) {
+                $('#'+id).attr(attr, responseJson['changes'][id][attr]);
+            }
+        }
+        $(".output").fadeTo(100, 1);
+        $(".loader").hide();
+
+    }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+      <div class="col-md-9">
+        <h3 class="text-center">{{ title }}</h3>
+      </div>
+    </div>
+    <div class="row">
+        {{ panels }}
+    </div>
+
+
+{% endblock %}

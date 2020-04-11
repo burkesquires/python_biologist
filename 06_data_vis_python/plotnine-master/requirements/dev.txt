@@ -1,0 +1,19 @@
+scipy
+statsmodels
+pandas
+matplotlib
+mizani
+geopandas
+descartes
+scikit-misc
+adjustText
+
+# Documentation
+-r doc.txt
+
+# Testing
+pyshp
+pytest-cov
+wheel
+pep8
+flake8

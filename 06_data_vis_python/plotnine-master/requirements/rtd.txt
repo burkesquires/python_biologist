@@ -1,0 +1,15 @@
+# doc
+git+https://github.com/has2k1/plotnine-examples#egg=plotnine_examples
+numpydoc>=0.9.1
+jupyter
+sphinx>=2.1.2
+nbsphinx
+pillow
+
+# For RTD virtual environment
+scipy
+statsmodels
+pandas
+matplotlib
+mizani
+adjustText

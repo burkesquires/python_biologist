@@ -1,13 +1,14 @@
 name: bokeh
 
 channels:
+  - bokeh
   - conda-forge
 
 dependencies:
-  - python=3.6
+  - python=3.7
   - numpy
   - notebook
-  - bokeh
+  - bokeh>=1.4
   - pandas
   - scipy
   - selenium
@@ -16,3 +17,5 @@ dependencies:
   - flask
   - phantomjs
   - holoviews
+  - hvplot
+  - jupyter_contrib_nbextensions
