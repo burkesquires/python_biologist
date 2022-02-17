@@ -1,8 +1,0 @@
-from plotnine import ggplot, aes, geom_blank
-from plotnine.data import mtcars
-
-
-def test_blank():
-    gg = ggplot(aes(x='wt', y='mpg'), data=mtcars)
-    gg = gg + geom_blank()
-    assert gg == 'blank'
