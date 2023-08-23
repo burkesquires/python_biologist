@@ -25,9 +25,6 @@ __Dates and topics__:
 - Biomedical Data Storage and Retrieval (using SQL & NoSQL)
 - Becoming a Reproducible Scientist
 
-For those interested in previous versions of this material please see the dropbox location at: http://bit.ly/nih-python
-
-
 Regards,
 
 R. Burke Squires
