@@ -1,0 +1,14 @@
+language: python
+python:
+  - "3.9"
+# command to install dependencies
+install:
+  - pip install --upgrade pytest coveralls pytest-cov
+  - pip install bokeh pandas Biopython bcbio-gff
+  - pip install -e .
+# command to run tests
+script:
+  - python -m pytest -v --cov dna_features_viewer --cov-report term-missing
+
+after_success:
+  - coveralls
