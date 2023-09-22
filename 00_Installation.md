@@ -4,7 +4,8 @@ Installation instructions
 
 	https://www.anaconda.com/download/
     
-    This single download, when run, installs teh python programming language, conda installer, Anaconda Navigotor, and many python packages.
+    This single download, when run, installs the python programming language, conda installer, Anaconda Navigotor, and many python packages.
+
 
 2. Download the files for today's class from my github page at:
 
@@ -15,16 +16,18 @@ Installation instructions
 	2.2 Uncompress the zip archive
 	
 	2.3 Move python_biologist_master folder to desktop
-	
-To setup your computer to write programs using the python programming language (and/or R):
 
-- Download the Anaconda V3 Python/R Distribution here:
+
+To setup your computer to write programs using the python programming language:
+
+- Download the Anaconda Distribution here:
 
 	https://www.anaconda.com/download/
 
 - Install the distribution in your home directory. You should not need any admin privileges for this.
 
+
 To start the Jupyter notebook:
 
-- From the terminal type "jupyter lab" or
 - From the Anaconda Navigator click "Jupyterlab"
+- From the terminal type "jupyter lab" or "./anaconda3/bin/jupyter lab"

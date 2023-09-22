@@ -1,6 +1,6 @@
 To setup your computer to write programs using the python programming language (and/or R):
 
-- Download the Anaconda V3 Python/R Distribution here:
+- Download the Anaconda Python/R Distribution here:
 
 	https://www.anaconda.com/download/
 
