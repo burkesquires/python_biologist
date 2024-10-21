@@ -1,0 +1,15 @@
+name: snakemake
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - bioconda::snakemake-minimal
+  - python
+  - jinja2
+  - networkx
+  - matplotlib
+  - graphviz
+  - bcftools
+  - samtools
+  - bwa
+  - pysam
