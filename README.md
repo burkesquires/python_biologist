@@ -1,6 +1,6 @@
 # Python Programming for Biologists
 
-*Python Programming for Biologists* is an open set of teaching materials built from a seminar series that started at NIAID/NIH in 2015 to help wet-lab scientists, analysts, and staff learn Python for real biological data. These sessions have been used to train researchers at NIH in Bethesda, Maryland and at NIEHS in Research Triangle Park, North Carolina.
+*Python Programming for Biologists* is an open set of teaching materials built from a seminar series that started at NIAID/NIH in 2015 to help wet-lab scientists, analysts, and staff learn Python for real biological data. These sessions have been used to train researchers at NIH (2015-2025) in Bethesda, Maryland and at NIEHS (2015 to present) in Research Triangle Park, North Carolina.
 
 The notebooks and slides in this repository walk through the core skills needed to move from zero Python experience to doing data analysis, visualization, and bioinformatics workflows in a reproducible way.
 
