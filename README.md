@@ -1,37 +1,29 @@
 # Python Programming for Biologists
 
+*Python Programming for Biologists* is an open set of teaching materials built from a seminar series that started at NIAID/NIH in 2015 to help wet-lab scientists, analysts, and staff learn Python for real biological data. These sessions have been used to train researchers at NIH in Bethesda, Maryland and at NIEHS in Research Triangle Park, North Carolina.
+
+The notebooks and slides in this repository walk through the core skills needed to move from zero Python experience to doing data analysis, visualization, and bioinformatics workflows in a reproducible way.
+
+## What you will learn
+
+- Working at the command line (UNIX shell)
+- Using Jupyter Notebooks for interactive analysis
+- Python fundamentals for new programmers
+- Python language essentials for experienced coders
+- Data analysis with pandas
+- Plotting and visualization in Python
+- Intermediate Python and best practices
+- Bioinformatics scripting and pipelines
+- Building automated workflows
+- Storing and querying biomedical data with SQL & NoSQL
+- Principles and tools for reproducible science
+
 ---
 
-These seminars have been presented to scientific researchers and staff at the National Institutes of Health (NIH) campus in Bethesda, Maryland yearly since ~2015.
+Created and maintained by **R. Burke Squires** (Computational Genomics, bioinformatics training, and reproducible workflows).
 
-These seminars have been recorded. Please see the NIAID Bioinformatics Portal for the recordings of these seminars and additional training materials at http://bioinformatics.niaid.nih.gov
+This project grew out of seminars originally offered, at no cost, by the NIAID [Bioinformatics and Computational Biosciences Branch (BCBB)](https://www.niaid.nih.gov/research/bioinformatics-computational-biosciences-branch) within the [Office of Cyberinfrastructure and Computational Biology (OCICB)](https://www.niaid.nih.gov/about/cyber-infrastructure-computational-biology-contacts).
 
-
-## NIAID / NIH Python Programming Seminar Series
-
-This seminar series is brought to you, at no cost, by the [NIAID](https://www.niaid.nih.gov/) [Bioinformatics and Computational Biosciences Branch (BCBB)](https://www.niaid.nih.gov/research/bioinformatics-computational-biosciences-branch), part of the [Office of Cyberinfastructure and Computational Biology (OCICB)](https://www.niaid.nih.gov/about/cyber-infrastructure-computational-biology-contacts).
-
-__Topics Covered__:
-
-- Introduction to the Command Line (and UNIX)
-- Introduction to Jupyter Notebooks
-- Introduction to Programming (with Python)
-- The Python Programming Language (for experienced programmers)
-- Data Analysis with Python and Pandas
-- Data Visualization with Python
-- Intermediate Python Programming and Best Practices
-- Bioinformatics Programming with Python
-- Building Workflows with Python
-- Biomedical Data Storage and Retrieval (using SQL & NoSQL)
-- Becoming a Reproducible Scientist
-
-Regards,
-
-R. Burke Squires
-Formerly: 
-  Computational Genomics Specialist
-  BCBB / OCICB / OSMO / OD / NIAID / NIH
-  http://bioinformatics.niaid.nih.gov
 
 ## Star History
 
